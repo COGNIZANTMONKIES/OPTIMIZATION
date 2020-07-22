@@ -1,0 +1,45 @@
+https://en.wikipedia.org/wiki/Algorithmic_efficiency
+
+algorithmic efficiency:
+  a property of an algorithm which relates to the number of computational resources
+  used by the algorithm. An algorithm must be analyzed to determmine its resource usage, 
+  and the efficiency of an algorithm can be measured based on usage of different resources.
+  Algorithmic efficiency can be thought of as analogous to engineering productivity
+  for a repeating or continuous process.
+ 
+conditional approach weights value system:
+  For maximum efficiency we wish to minimize resource usage. however, different resources
+  such as time and space complexity cannot be compared directly, so which of two algorithms
+  is considered to be more efficient often depends on which measure of efficiency is considered
+  most important.
+  
+evident algorithmic optimization grassroots:
+  early electronic computers were severely limited both by the speed of operations and the
+  amount of memory available. In some cases it was realized there was a space-time trade-off,
+  whereby a task could be handled either by using a fast algorithm which used quite a lot of
+  working memory, or by using a slower algorithm which used very little working memory.
+  The engineering tradeoff was then to use the fastest algorithm which would fit in the available
+  memory. Modern computers are significantly faster than early computers, and have a much larger
+  amount of memory available. Nevertheless, Donald Knuth emphasised that efficiency is still an 
+  important consideration "in established engineering disciplines a 12% improvement,
+  easily obtained, is never considered marginal and I believe the same viewpoint should prevail
+  in software engineering"
+
+known ways of measuring efficiency:
+  the two most common ways measures are speed and memory usage;
+  other measures could include transmission speed, temporary disk usage,
+  long-term disk usage, power consumption, total cost of ownership,
+  response time to external stimuli, etc. Many of these measures depend 
+  on size of input to the algorithm, i.e. the amount of data to be processed.
+  They might also depend on the way in which the data is arranged; for example,
+  some sorting algorithms perform poorly on data which is already sorted,
+  or which is sorted in reverse order. In practice, there are other factors
+  which affect the efficiency of an algorithm, such as requirements for accuracy
+  and/or reliability. As detailed below, the way in which an algorithm is implemented
+  can also have a significant effect on actual efficiency, though many aspects of this
+  relate to optimization issues.
+    
+
+
+
+  

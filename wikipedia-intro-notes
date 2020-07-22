@@ -38,6 +38,29 @@ known ways of measuring efficiency:
   and/or reliability. As detailed below, the way in which an algorithm is implemented
   can also have a significant effect on actual efficiency, though many aspects of this
   relate to optimization issues.
+  
+theoretical analysis
+  the normal practice is to estimate their complexity in the asymptotic sense.
+  most commonly used notation to describe resource consumption or "complexity"
+  is Donald Knuths Big O notation, representing the complexity of an algorithm as a 
+  function of the size of the input. Big O notation is an asymptotic measure of function
+  complexity, where f(n) = O(g(n)) roughly means the time requirement for an algorithm
+  is proportional to y(n), omitting lower-order terms that contribute less than g(n) to the 
+  growth of the function as n grows arbitrarily large. This estimate may be misleading
+  when n is small, but is generally sufficiently accurate when n is large as the notation
+  is asymptotic.
+  
+  O(1)        constant
+  O(log n)    logarithmic
+  O(n)        linear
+  O(n log n)  linearithmic, loglinear, or quasilinear
+  O(n**2)     quadratic
+  O(c**n),c>1 exponential
+  
+  
+Benchmarking (measuring performance):
+  
+
     
 
 

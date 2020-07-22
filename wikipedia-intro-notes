@@ -60,8 +60,40 @@ theoretical analysis
   
 Benchmarking (measuring performance):
   
+  for new versions of software or to provide comparisons with competitive systems,
+  benchmarks are sometime used, which assist with gauging an algorithms relative
+  performance. If a new sort algorithm is produced, for example, it can be compared
+  with it's predecessors to ensure that at least it is efficient as before with known data,
+  taking into consideration any functional improvements.
 
-    
+
+Implementation concerns:
+  
+  beware of interpretted languages as they are the slowest to execute
+  versus a compiler
+  there are other factors which may affect time or space issues, but which
+  may be outside of a programmers control; these include data alignment,
+  data granularity, cache locality, cache coherency, garbage collection,
+  instruction-level parallelism, multi-threading (at either a hardware or software
+  level), simulataneous multitasking, and subroutine calls.
+  
+Measures of resource usage:
+  - time
+  - space
+  - direct power consumption
+  - indirect power consumption
+  - transmission size
+  - external space
+  - response time
+  - total cost of onwership
+  
+space:
+  there are 4 aspects of memory usage to consider:
+  - amount of memory needed to hold the code for the algorithm
+  - amount of memory needed for the input data
+  - amount of memory needed for the output data
+  
+
 
 
 

@@ -1,0 +1,30 @@
+analysis of algorithms:
+  the process of finding the computational complexity of algorithms - the amount of time,
+  storage, or other resources needed to execute them. Usually this involves determining
+  a function that relates the length of an algorithms inputs to the number of steps it 
+  takes (its time complexity) or the number of storage locations it uses (its space complexity)
+  An algorithm is said to be efficient when this functions values are small, or grow slowly compared
+  to a growth in size of the input. Different inputs of the same length may cause the algorithm 
+  to have different behavior, so best, worst and avergage case descriptions might all be of pratical interest
+  When not otherwise specified, the function describing the performance of an algorithm is usually an
+  upper bound, determined from the worst case inputs to the algorithm.
+
+
+cost modeles:
+  
+  uniform cost model: 
+    assigns a constant cost to every machine operation, regardless of the size
+    of the numbers involved.
+    
+  logarithmic cost model:
+    assigns a cost to every machine operation proportional to the number of bits involved.
+    
+Run-time analysis:
+  a theoritcal classification that estimates and anticipates the increase in running time
+  (or run-time) of an algorithm as it's input size (usually denoted as n) increases.
+  Run-time efficiency is a topic of great interest in computer science: A 
+  program can take seconds, hours, or even years to finish executing, depending on which algorithm
+  it implements. While software profiling techniques can be used to measure an algorithm's 
+  run-time in practice, they cannot provide timing data for all infinitely many possible
+  inputs; the latter can only be achieved by the theoretical methods of run-time analysis.
+

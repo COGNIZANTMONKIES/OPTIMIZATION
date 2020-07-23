@@ -1,3 +1,8 @@
+//
+//
+// https://en.wikipedia.org/wiki/Analysis_of_algorithms
+//
+//
 analysis of algorithms:
   the process of finding the computational complexity of algorithms - the amount of time,
   storage, or other resources needed to execute them. Usually this involves determining
@@ -27,4 +32,26 @@ Run-time analysis:
   it implements. While software profiling techniques can be used to measure an algorithm's 
   run-time in practice, they cannot provide timing data for all infinitely many possible
   inputs; the latter can only be achieved by the theoretical methods of run-time analysis.
+
+Orders of growth:
+  Informally, an algorithm can be said to exhibit a growth rate on the order of a mathematical
+  function if beyond a certain input size n, the function f(n) times a positive constant provides
+  an upper bound or limit for the run-time of that algorithm.
+  
+  Big O notation is a convenient way to express the worst-case scenario for a given algorithm,
+  although it can also be used to express the average-case -- for example, the worst-case scenario
+  for quicksort is O(n2), but the average-case run-time is O(n log n).
+  
+
+Relevance:
+  algorithm analysis is important in practice because the accidental or unintentional use of 
+  an inefficient algorithm can significantly impact system performance performance. In time-sensitive
+  applications, an algorithm taking too long to run can render its results outdated or
+  useless. An inefficient algorithm can also end up requiring an uneconomical amount of 
+  computing power or storage in order to run, again rendering it practically useless.
+  
+
+
+
+
 

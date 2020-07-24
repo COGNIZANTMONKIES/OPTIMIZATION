@@ -1,1 +1,13 @@
-
+******************************************************************************
+Fundamentals - Computational Optimizations
+******************************************************************************
+* 0. System ... is it binary? Is it pentary?
+* 1. Memory 
+* 2. Logic		
+* 3. Computer Operators
+* 4. Orientation
+* 5. Mental Language Approach
+* 6. Independent versus Whole
+* 7. Numerical Medium
+* 8. Leveraging a function to many
+* 9. BootStrap/LoadTime & Live/RunTime

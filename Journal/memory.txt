@@ -1,0 +1,12 @@
+Datatypes are useless.
+They are memory hogs
+with static computational engines
+interpretting only one slow way.
+
+Datatypes should be thought of as sized memory chunks
+passed between CPU, cache, and RAM.
+Data is just just 1's ands 0's, or whatever number system 
+in place. Nothing more.
+
+An int can be represented with a char and vice versa.
+Truly, what matters is swift data manipulation.

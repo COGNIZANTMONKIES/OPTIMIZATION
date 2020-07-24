@@ -1,0 +1,99 @@
+##############################################################################
+##############################################################################
+####       
+####    *** *** *** *** *** *** ***  *  *** *** *** * *
+####    * * ***  *   *  ***  *   *   *   *   *  * * ***
+####    *** *    *  *** * * *** *** * *  *  *** *** * *
+####    
+####    ooo ppp TTT III AAA III ZZZ  A  TTT ZZZ ooo N N
+####    o o ppp  T   I  AAA  I   Z   A   T   Z  o o NNN
+####    ooo p    T  III A A III ZZZ A A  T  ZZZ ooo N N
+####    
+##############################################################################
+##############################################################################
+
+
+##############################################################################
+###		Introduction
+##############################################################################
+******************************************************************************
+Fundamentals - Computational Optimizations
+******************************************************************************
+* 0. System ... is it binary? Is it pentary?
+* 1. Memory 
+* 2. Logic		
+* 3. Computer Operators
+* 4. Orientation
+* 5. Mental Language Approach
+* 6. Independent versus Whole
+* 7. Numerical Medium
+* 8. Leveraging a function to many
+* 9. BootStrap/LoadTime & Live/RunTime
+******************************************************************************
+General Info - Thoughts
+******************************************************************************
+Organization
+* requirements first
+* stay dry ... demolishing repeated instructions
+* flexibility ...  api'd software architecture
+
+Concerns
+* When (!not) to optimize
+* Security Cautions ... single purpose algs ... requirements gathering
+* human readable to machine optimal
+
+Wisdom
+* inquisition
+* clarity
+* u can't optimize something u don't understand
+* angles
+* constraints unconstrain innovation
+* numbers are just numbers, until you assign value to it
+******************************************************************************
+Benchmarking
+* baseline
+
+Why Practice Optimization
+* low electric bills
+* low hardware bill
+* low latency
+* low staff
+* instant loadtime
+* instant runtime
+* great user experience
+* overall thinking improves
+* higher salary
+
+
+Fundamentals Applied
+
+0. Breaking Mental Wall, Anything can be Anything
+* infinite equivalent equations
+* infinite purpose leveraging
+
+1. Independent Funcs
+* optimizing introduction code ... the basic for loop i++ versus mine
+* optimizing known algorithms
+* optimizing random algorithms
+* optimizing algorithm challenges
+
+2. Small Programs
+* optimizing class
+* api communications
+
+3. Large Programs
+* architect as one, leverage the independence
+
+
+
+
+
+
+
+
+
+
+
+
+
+

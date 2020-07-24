@@ -1,0 +1,556 @@
+##############################################################################
+##############################################################################
+		            Independent Functions
+##############################################################################
+##############################################################################
+
+
+******************************************************************************
+			Outline
+******************************************************************************
+
+*optimizing introduction code
+
+
+*optimizing my samples
+
+******************************************************************************
+optimizing introduction code
+******************************************************************************
+(ALL REQUIRE BENCHMARK STAT %)
+(REVIEW)*loops
+(REVIEW)*isEven, isODD
+(REVIEW)*conditional ... everyother
+
+
+//LOOPS//
+
+/*JavaScripts Documented Loop ... purely numbers*/
+
+	for (let i=0;i<100;i++) {console.log(i);}
+
+/*OPTIMIZED Loops*/
+
+// Forwards
+	
+	let i;
+
+	for (i=0;100^i++;)      {console.log(i);}
+	
+// Backwards
+
+	let i;
+	for (i=100;--i;)	{console.log(i);}
+	console.log(0);
+
+/*JavaScripts Documented Loop ... hash access*/
+
+	let list = ['a','b','c','d','e'];
+
+	for (let i=0;i<list.length;i++)	{console.log(list[i]);}
+
+
+// Forwards 
+	// warning ... any falsy value will cut loop short
+	let list = ['a','b','c','d','e'];
+	
+	let i;
+
+	for (i=false; console.log((i=arr.shift())),i; i++)
+
+
+// Backwards
+
+	// warning same as above
+
+	let list = ['a','b','c','d','e'];
+
+	let i;
+
+	for (i=false; console.log((i=arr.pop())),i;) 
+
+
+
+/*More Ways to loop*/
+
+// Forwards
+
+instead of (   i <   lim   )
+
+do 	   (   i !== lim   )
+
+do         (   i ^   lim   )
+
+
+// Backwards
+
+instead of (   i >   lim   ) 
+
+do 	   (   i !== lim   )
+
+do         (   --i         ) then lowest i because ...
+
+do         (   i ^   lim   ) then lowest i because it never exes during loop
+
+
+lets say you only had to loop 5 times
+
+then  for (let i=32; i>>1;)
+
+let's say you only had to loop 31 times     
+
+then  for (let i=2**32; i>>1;)
+
+
+/*TWEAKING LOOPS*/
+
+Loops demonstrated above break ordinary/routine habits.
+Normally 3 placeholders are used. 
+
+normal syntax:     for (<init>;<limit:boolean>;<stepper:void>;) {<block>}
+
+
+leveraged syntax:  for (<init>;<limit:boolean>;)
+
+
+
+Point outs.
+
+
+Within the <limit> syntax, take advantage of comma expressions;
+
+i.e.     i = console.log('hi'), 3;   // prints 'hi' and i equals 3.
+
+
+* comma expressions reduce execution time by squeezing expressions before 
+  a new round starts.
+
+
+
+imagine position a = <init>
+imagine position b = <limit>
+imagine position c = <stepper>
+
+
+
+a .. b .. c are there own invoked function positions.
+All must be invoked first before the statemens inside evaluate.
+
+
+
+Think of a .. b .. c as 5 bits each.
+
+
+Minimum 5*3=15 bits used. 
+
+And each statement is 2bits each.
+
+
+
+	... = statements
+
+	a:(5+ ...)   +     b:(5+ ...)   +   c:(5+ ...
+
+	_____________________________________________
+
+
+	Now you see why squeezing them together is better.
+
+
+	Because you lose 5 every for one less invoke.
+
+******************************************************************************
+******************************************************************************
+
+// isEven,isOdd //
+
+/*JavaScript Demo*/
+
+function isEven(n) {return n%2===0;}
+function isOdd(n)  {return n%2===0;}
+
+
+/*OPTIMIZED*/
+
+// * booleans are unneccessary, numbers are truthy and falsy
+// * modulus is 10base, evenODD is binary
+
+function isEven(n) {return (n&1)^false;}
+function isOdd(n) {return (n&1)^true; }
+
+
+// Special Mentions
+
+// * Inversing Interpreations
+
+// both isEven & isOdd can both be the (n&1) but whichever is used ....
+
+
+// Problems with Even and ODD.
+
+*** needs to support decimals as well
+
+
+// CONDITIONALS //
+
+Traditional Conditionals
+* Conditionals pivot rivers flows
+* Random Inputs / Security Conciousness
+
+Ping Pong Memory Assignment
+* Predictable Inputs
+* Faster than Traditional Conditionals
+
+
+
+
+
+/* Traditional Conditionals Example */
+
+	for (let i=0;i<100;i++) {
+		if (i%2===0) {console.log('even');}
+		else 	     {console.log('odd');}
+	}
+
+
+/* Ping Pong Memory Assignment */
+
+	function state0() {
+		console.log('even');
+		func=state1;
+	}
+	function state1() {
+		console.log('odd');
+		func=state2;
+	}
+	let func;
+	let i;
+	for (i=-1; func(),++i^100;)
+
+
+	/* Commentary
+		* almost recursion, but assigns function instead
+		* faster than conditionals because there are less executions stages
+	*/
+
+
+
+
+**********************************************************************************
+	optimizing my code
+**********************************************************************************
+
+***
+References fundamentals. Define logical approaches. Ration the best. 
+Implement. Then tweak computer operators.
+***
+
+ALGORITHM: numbers only, no typeof, no throw errors allowed;
+	
+
+	*** This exercise challenges our understanding of operations output inflicted on datatypes and there ranges.
+
+	// Standard Approach: With TypeOf & throw Errors
+	
+	function isNumber(a) {
+		
+		if (typeof a !== 'number') {throw new Error('not a number');}
+		
+		return 'number';
+	}
+
+	
+	// Clever Approach: WithOut TypeOf & throw errors
+	Constraints
+	* no if statements
+	* no typeof ... including Number.isNaN or Float, or integers, etc
+	* no signed / unsigned bit checking
+        * no gt lt comprarsion like operators
+	Lets Talk it Out.
+
+	* Given the constraints, we'll need to use our operators wisely
+	* This is tricky because non number datatypes still have a one or 0 value.
+	* All UnEmpty DataTypes are Considered truthy. Meaning there Number equivalent is one.
+
+	
+
+	Initial Operators we can not use:
+
+	* * n
+	* + n
+	* - n
+	
+	* / almost brings hope because anything divided by 0 in js is Infinity or NaN.
+        * but theres a faster way.
+
+
+
+	we'll use the bitwise operator << because it only shifts numbers.
+
+	Meaning the only non number datatypes remaining are
+
+	- an array with a pure number insid		equals any pos or negative 
+							limited to a single index
+
+	- a string with pure numbers			equals any pos or negative
+
+
+
+	- and the true boolean				equals 1
+
+
+	a=number
+
+	a.toFixed is a unique identifying property from all other datatypes,
+	problem is,  arrays inputs properties are modifiable. Which would lead
+	us to more and more overhead validating.
+
+
+	instead, the ! operator concern effects the datatype instead of the number value.
+
+
+	Were left with one problem. 
+
+
+	!0 => true;
+	!1 => false;
+
+
+	!true  => false
+	!false => true
+
+
+
+	We must strategize a distinction. 
+	
+
+
+	! operator returns false for any datatype not equal to 0 in any way.
+
+	Or we could double tilda '~~'
+
+	
+
+
+	// Final Product
+	function isNumber(a) {
+		return ~~a === a
+	}
+
+
+**************************************************************************
+
+ALGORITHM: printMultiplesOf5
+
+
+3 Logical Approaches by Examples
+
+Logical Approach 0) Multiply any by 5
+Logical Approach 1) Add5 without add operators
+Logical Approach 2) increment by 1 where 1 equals 5;
+Logical Approach 3) differential incrementing
+
+
+*** Logical Approach Ranking
+
+* Ranked Slowest/Bulkiest to Fastest/Lightweight
+
+- Lower number is the normal bulky approach
+- Higher Number is a faster unlikely approach ... mental constraints, experience, budget ... dictate
+
+
+Logical Approach 0-2 run are constrained by memory. Eventually memory limits
+Logical Approach 0 is the slowest computationally but easiest to code.
+Logical Approach 3 is the fastest computationally and lightest memory.
+
+
+Version System
+
+version syntax L.T
+
+	L: Logical Approach		Strongest Performance Gain
+	T: Computer operator tweaked    "BareMetal Translations"
+
+
+	** remember the fundamentals **
+	--- memory and logic are yin and yang, there codependent and nothing without eachother
+	--- 0. System ... likely, your using a binary computational system. Other operators are built ontop of logical and bitwise translations.
+	--- 1. Memory ... throw boulders or pebbles. Pebbles are agile. boulders require buffer await needing teamwork 
+	--- 2. Logic  ... logic revolves around memory, but in E=MC**2, where is time? Exactly. Time is calculable without a equational presence.
+	--- and more ... 
+
+/*LOGICAL APPROACH 0*/
+
+
+// VERSION 0.0 // normal approach
+module.exports = function(n){
+	for (let i = 1; i <= n; i++) {
+		console.log(5*i);
+	}
+}
+// VERSION 0.1 // limiter tweaked, !== is binary POV, where as chronological ranking uses math operators
+module.exports = function(n){
+	for (let i = 0; i !== n; i++) {
+		console.log(5*i);
+	}
+}
+// VERSION 0.2 // limiter tweaked again, tho xor uses less translations than !==
+module.exports = function(n){
+	for (let i = 0; i^n;i++) {
+		console.log(5*i);
+	}
+}
+// VERSION 0.3 // merged increment statement with limiter. Statement Cramming reduces interval/clocked executions and promotes caching ... less transitions between CPU CACHE & RAM
+	       // fastest forward incrementation & limiter combo
+module.exports = function(n){
+	for (let i = -1; i++^n;) {
+		console.log(5 * i);
+	}
+}
+// VERSION 0.4 // fastest everything with crammed statement merging.
+	       // loop block not needed, all executions in limiter
+module.exports = function(n){
+	for (let i = -1; console.log(5 * ++i), (i^n););
+}
+
+
+/*LOGICAL APPROACH 1*/
+
+// VERSION 1.0 // normal approach
+
+module.exports = function(n){
+
+	let i = 0;
+	let onesPlace;
+	let tensPlace = 0;
+	let tenIncrement = 0;
+
+	for (let i = 0; i < n; i++) {
+		//console.log(i);
+		if (i%2===0) {
+			onesPlace = 5;
+		}
+		else {
+			onesPlace = 0;
+			tensPlace++;
+		}
+		console.log((tensPlace * 10) + onesPlace);
+	}
+}
+
+// VERSION 1.1 // conditionals tweaked
+
+module.exports = function(n){
+
+	let i = 0;
+	let onesPlace;
+	let tensPlace = 0;
+	let tenIncrement = 0;
+
+	for (let i = 0; i^n;i++) {
+		//console.log(i);
+		if (i&1) {
+			onesPlace = 5;
+		}
+		else {
+			onesPlace = 0;
+			tensPlace++;
+		}
+		console.log((tensPlace * 10) + onesPlace);
+	}
+}
+
+// VERSION 1.2 // if-else statements replaced with PINGPONG memory caching exec
+		
+	       // if-else are good for input unpredicatibilty such as serverside public facing code
+		
+	       // PINGPONG memory caching great for input predictability
+
+	       // for loop expression cramming mentioned in logical approach 0
+
+module.exports = function(n){
+
+	let onesPlace;
+	let tensPlace = 0;
+	let tenIncrement = 0;
+
+	let func=state1;
+
+	function state1() {
+		onesPlace = 5;
+		printDig();
+		func = state2;
+	}
+	function state2() {
+		onesPlace = 0;
+		tensPlace++;
+		printDig();
+		func = state1;
+	}
+	function printDig() {
+		console.log((tensplace * 10) + onesPlace);
+	}	
+
+	for (let i = 0; func(), ++i^n;);
+}
+
+
+
+/*LOGICAL APPROACH 2*/
+
+*** works best with less IO translations
+
+- representational / symbolic incrementing halves instructions
+- reduces memory demands
+- reduces cpu demands
+- y = mx + b ... without m or b ... m neccessary for end translation
+
+
+// VERSION 2.0 // standard approach // f(x) = x;
+
+
+module.exports = function(n) {
+	for (let i = 1; i < n+1; i++) {console.log(i);}
+}
+
+// VERSION 2.1 // optimized loop // same loop tweaking examples above
+
+module.exports = function(n) {
+	for (let i = 1; console.log(i), ++i^n;);
+}
+
+
+
+// Explanations
+
+Remember y = mx + b from Algebra I? 
+In this case 5 multiplyBy5 is the m.
+M can be removed from inner computational calculations because its extra work.
+Once finished with all calculations, then M is inserted back.
+
+Imagine this.
+
+
+Original 5m     ---> translate to m, withheld 5,
+
+inner functions executing ---> many many functions executing
+
+translate back ----> apply 5 to m.
+
+
+
+
+
+
+/*LOGICAL APPROACH 3*/
+- differential incrementing
+- builds off of LOGICAL APPROACH 2
+***
+We've identified a system so fast, it can remain in the computers cache
+***
+
+
+
+
+
+

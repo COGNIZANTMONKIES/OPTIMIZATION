@@ -1,1 +1,4 @@
-
+Organization
+* requirements first
+* stay dry ... demolishing repeated instructions
+* flexibility ...  api'd software architecture

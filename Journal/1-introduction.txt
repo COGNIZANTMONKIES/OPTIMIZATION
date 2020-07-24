@@ -16,31 +16,57 @@
 ##############################################################################
 ###		Introduction
 ##############################################################################
-******************************************************************************
-Fundamentals - Computational Optimizations
-******************************************************************************
-* 0. System ... is it binary? Is it pentary?
-* 1. Memory 
-* 2. Logic		
-* 3. Computer Operators
-* 4. Orientation
-* 5. Mental Language Approach
-* 6. Independent versus Whole
-* 7. Numerical Medium
-* 8. Leveraging a function to many
-* 9. BootStrap/LoadTime & Live/RunTime
-******************************************************************************
-General Info - Thoughts
-******************************************************************************
-Organization
-* requirements first
-* stay dry ... demolishing repeated instructions
-* flexibility ...  api'd software architecture
 
-Concerns
-* When (!not) to optimize
-* Security Cautions ... single purpose algs ... requirements gathering
-* human readable to machine optimal
+Why Practice Optimization?
+
+* lowers electric bills
+* lowers hardware bill
+* lowers latency
+* reduces staff
+* near-instant loadtime
+* near-instant runtime
+* great user experience
+* overall thinking improves
+* higher salary
+
+Origins of Optimization
+
+  Where there are limitations, optimization follows behind.
+  Optimizations timelime stretches as far as the first human artifact.
+  Fabricating tools from sticks, rocks, vegetation, and all the Earths 
+  provided surroundings. Building these tools drained our energy, 
+  cut our hands, dehydrated us, sometimes broke bones. To obtain the resources,
+  bipedals we are, travelled barefoot far and wide, scavenging for resources.
+  Farming and colonies popped into existence. A new and constant problem 
+  arose from those activities. REPLICATION. Duplicating things becomes time 
+  consuming. Since we converted from nomads to domesticants, our survival 
+  dependency transitioned from hunting to replication of food, tools, shelter, etc.
+  Resources are limited. Shelter spares the body from the elements ruthless erosion.
+  Shelter for everyone required us to think ahead and be clever with what we have.
+  Molding materials like bricks with holes in the center to conserve supply and lighten
+  the load kills two birds one stone. Dedicating portions of trees to cut for certain areas
+  of buildings saved us from extra chopping, cutting, and relocation.
+  Jumping to the industrial age. One of the most important optimizations mankind
+  invented were machines. Machines applied to farming accelerated crop productions.
+  An abundance of food and minimal set of required harvesting hands freed us from 
+  living off the land as a way of life. With free pairs of available, we moved
+  onto new inventions inspired by machines. An electrical powered computer
+  was conceived. Calculations crunched at mouth dropping speeds. A new set of
+  free hands/minds available again. Computers then versus now were terribly slow.
+  About a million times slower. Our ambitions demanded faster hardware and faster software.
+  It's 2020, were in the era of Artificial Intelligence. Computer are millions of times faster
+  than it's conception. Even with all this speed, AI calculations take weeks, months, and sometimes years.
+  Hardware optimizations are reaching there limitations. Software optimizations were ignored because
+  of the high cost of an engineer and the cheapness of purchasing faster hardware. 
+  The impact of fast hardware is nothing compared to optimized software. This book will teach
+  you the practice of thinking differently because optimization demands new perception
+  to solve problems.
+  
+Financial Savings of Software Optimization  
+ 
+Intentional Focus
+
+Who this book is for
 
 Wisdom
 * inquisition has no bounds
@@ -49,51 +75,4 @@ Wisdom
 * angles / broad perception
 * constraints unconstrain innovation
 * numbers are just numbers, until you assign value to it
-******************************************************************************
-Benchmarking
-* baseline
-
-Why Practice Optimization
-* low electric bills
-* low hardware bill
-* low latency
-* low staff
-* instant loadtime
-* instant runtime
-* great user experience
-* overall thinking improves
-* higher salary
-
-
-Fundamentals Applied
-
-0. Breaking Mental Wall, Anything can be Anything
-* infinite equivalent equations
-* infinite purpose leveraging
-
-1. Independent Funcs
-* optimizing introduction code ... the basic for loop i++ versus mine
-* optimizing known algorithms
-* optimizing random algorithms
-* optimizing algorithm challenges
-
-2. Small Programs
-* optimizing class
-* api communications
-
-3. Large Programs
-* architect as one, leverage the independence
-
-
-
-
-
-
-
-
-
-
-
-
-
 

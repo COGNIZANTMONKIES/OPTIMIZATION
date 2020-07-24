@@ -1,1 +1,5 @@
+Concerns
+* When (!not) to optimize
+* Security Cautions ... single purpose algs ... requirements gathering
+* human readable to machine optimal
 

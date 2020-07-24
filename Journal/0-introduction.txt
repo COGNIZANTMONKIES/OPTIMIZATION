@@ -43,10 +43,10 @@ Concerns
 * human readable to machine optimal
 
 Wisdom
-* inquisition
-* clarity
+* inquisition has no bounds
+* clarity see things clearly
 * u can't optimize something u don't understand
-* angles
+* angles / broad perception
 * constraints unconstrain innovation
 * numbers are just numbers, until you assign value to it
 ******************************************************************************

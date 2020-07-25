@@ -1,7 +1,7 @@
 ******************************************************************************
 Fundamentals - Computational Optimizations
 ******************************************************************************
-* 0. System ... is it binary? Is it pentary?
+* 0. System
 * 1. Memory 
 * 2. Logic		
 * 3. Computer Operators
@@ -58,12 +58,60 @@ Fundamentals - Computational Optimizations
 * 3. Computer Operators
   
   Is it possible to replace operators with bitwise operators?
-  Are there alternative equivalent replacements with other operators?
-  
+  Are there alternative equivalent replacements with other operators? Using more operators doesn't always mean slower speeds.
   
 * 4. Orientation
+
+  Are you looping forwards/ascending?
+  Are you looping backwards/descending?
+  Are you solving the problem from start to finish, finish to start, middle out, etc?
+
 * 5. Mental Language Approach
+
+  Are you programming via human language or computer language?
+  Computer languages let you see patterns clearer.
+
+  // Human Language
+  function cat(){}
+  function dog(){}
+  function cow(){}
+  function zoo(){}
+  
+  cat(); dog(); cow(); zoo();
+  
+  // computer language
+  function _0(){}
+  function _1(){}
+  function _2(){}
+  function _3(){}
+  
+  [_0 -> _3]() // invokes _0 _1 _2 _3
+
 * 6. Independent versus Whole
+
+  Are you optimizing one function, a section of the project, or the whole thing?
+  
+  Let me tell you a story. 
+  Server software A was widely used by the community.
+  Server software B was created because they believed they could go faster than A.
+  Server software B spent years developing code. They achieved twice the speed.
+  One algorithm had increased 100 fold. Why did the whole system not improve by 10 fold or 
+  100 fold? B's main focus was to allow consumers to easily port code from A to B. They matched
+  interfaces but changed things underneath the hood. Only a small unnoticable percentage of the community
+  uses B's software. Why? Here are few known reasons seasoned web developers experience.
+  Database queries are slow. Reading from Disk storage exhaust resources.
+  Networking latency between distributed systems are time delaying. They cause many threads to pause.
+  Securing a backend slows it down because no corners were cut.
+  A fast server is not bad, it's great, just doesn't solve the main problems of the market.
+  The market will likely rewrite there backend with another language than optimize there system.
+  Why? They are not capable of optimizing systems nor even have the algorithmic mindset to begin.
+  The next financially logical step is porting code to a lower langauge than optimizing the whole thing.
+  Software that optimizes algorithms (Steps Logic) needs to become a global collaboritive effort. Otherwise,
+  manually optimizing code is a turn off to all parties.
+
 * 7. Numerical Medium
 * 8. Leveraging a function to many
+
+  Never optimize a poorly architected solution. Architected solutions have little to none redundant code.
+
 * 9. BootStrap/LoadTime & Live/RunTime

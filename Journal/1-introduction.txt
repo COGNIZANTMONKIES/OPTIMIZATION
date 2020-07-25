@@ -68,6 +68,13 @@ Financial Savings of Software Optimization
   The engineering staff cost is 3 million dollars. A total of 6 million dollars.
   Now imagine you tweaked a few bottlenecked algorithms. The supercomputer runs the next round of calculations
   and takes 1 month. You now saved 4 million dollars. What do you think your salary cut should be?
+  I once wrote an algorithm to identify prime numbers. For numbers in the billions, the baselevel algorithm
+  figured out the problem in 16 seconds. My approach was very different. I reduced the search space to 
+  a tiny sliver on the pi chart. The optimized algorithm could conclude numbers in the billions prime or not in about
+  .3 seconds excluding even numbers because evens were the first check. Thats 1.8 % the time required to compute.
+  The size of the inputs rarely effected time required. Another technique used to eliminate the search space was
+  knowing what factors multiplied ended with a certain number. So my dividing by n loops were strategized.
+  Read a story about a programmer who spent two weeks tweaking a programs performance. They were
   
 Intentional Focus
 

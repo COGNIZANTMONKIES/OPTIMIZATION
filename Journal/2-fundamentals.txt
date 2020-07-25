@@ -11,3 +11,59 @@ Fundamentals - Computational Optimizations
 * 7. Numerical Medium
 * 8. Leveraging a function to many
 * 9. BootStrap/LoadTime & Live/RunTime
+
+* 0. System ... is it binary? Is it pentary?
+  
+  Does the algorithm require a or many dedicated computers?
+  What system or systems are you executing your project on?
+  Are you writing platform specific code?
+  Is your project married to a programming language?
+  Is your project using multiple programming languages?
+  Are you using a lightweight OS?
+  What systems might the platform specific code be run on?
+  
+  Is this a private or shared computer?
+  Single computer? Cluster computer? Node / Server Computer?
+  
+  CPU speed?
+  How many cores?
+  
+  Encodings?
+  
+  Assembly, Interpretter, or Compiler?
+
+* 1. Memory 
+
+  How many registers?
+  How many caches and what are the sizes of each?
+  How much RAM?
+  How much local storage HDD and/or SSD?
+  How much cloud storage HDD and/or SSD?
+  
+  What are the memory transaction speeds of each component? Sometimes milking the SSD instead of pre loading into RAM might be resource conserving.
+  
+* 2. Logic
+
+  What input/output ranges?
+  What input/output datatypes?
+  what input/output sets known?
+   
+  Is the input data random?
+  Is the input data presorted?
+  
+  How many steps to complete? How many equivalent ways can you think of?
+  
+  Should some functions be merged together to make the overall process faster?
+
+* 3. Computer Operators
+  
+  Is it possible to replace operators with bitwise operators?
+  Are there alternative equivalent replacements with other operators?
+  
+  
+* 4. Orientation
+* 5. Mental Language Approach
+* 6. Independent versus Whole
+* 7. Numerical Medium
+* 8. Leveraging a function to many
+* 9. BootStrap/LoadTime & Live/RunTime

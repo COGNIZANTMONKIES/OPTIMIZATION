@@ -63,16 +63,21 @@ Origins of Optimization
   to solve problems.
   
 Financial Savings of Software Optimization  
- 
+
+  Imagine a supercomputer computes for 3 months. The total electricity bill is 3 million dollars.
+  The engineering staff cost is 3 million dollars. A total of 6 million dollars.
+  Now imagine you tweaked a few bottlenecked algorithms. The supercomputer runs the next round of calculations
+  and takes 1 month. You now saved 4 million dollars. What do you think your salary cut should be?
+  
 Intentional Focus
 
-Who this book is for
-
-Wisdom
-* inquisition has no bounds
-* clarity see things clearly
-* u can't optimize something u don't understand
-* angles / broad perception
-* constraints unconstrain innovation
-* numbers are just numbers, until you assign value to it
+  In order to comprehend this book, readers must be competent algorithm writers and a fluent 
+  understanding in a programming languages. In my eyes, there are 10 stepping stone fundamentals 
+  to software optimization. Our main focus is the most important fundamental as it's in your 
+  control and has the largest performance impact. Logical approach. Compilers have there own optimizations 
+  but never modify the "a-z steps" to solve a problem. At most the compiler substitutes computer operations 
+  with faster operations. Practioners will only learn by conjuring there own solutions. Currently, 
+  the only algorithm to optimize algorithms is exposing programmers to contrastable samples hoping 
+  there brains formulate new patterns. Otherwise, it would be pointless to preach optimization as 
+  automating optimization is a computational nightmare considering the endless constraints.
 

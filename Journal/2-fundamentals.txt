@@ -107,7 +107,7 @@ Fundamentals - Computational Optimizations
   Why? They are not capable of optimizing systems nor even have the algorithmic mindset to begin.
   The next financially logical step is porting code to a lower langauge than optimizing the whole thing.
   Software that optimizes algorithms (Steps Logic) needs to become a global collaboritive effort. Otherwise,
-  manually optimizing code is a turn off to all parties.
+  manually optimizing code is a turn off to all parties as its not scalable.
 
 * 7. Numerical Medium
 * 8. Leveraging a function to many

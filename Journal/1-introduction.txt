@@ -46,6 +46,16 @@ Origins of Optimization
   Molding materials like bricks with holes in the center to conserve supply and lighten
   the load kills two birds one stone. Dedicating portions of trees to cut for certain areas
   of buildings saved us from extra chopping, cutting, and relocation.
+  
+  Printing is by far one of the most impactful optimizations mankind produced. Rethink the meaning of
+  printing as anything that replicates. Printing can be thought of as manufacturing vehicles or even 
+  the assembly line to create wooden pencils. They start from resources then convert into a final product.
+  A wikipedia article claims early recognition of printing was around 200AD from China. The method was called 
+  Woodblock Printing which easily allowed duplications for printing text, images or patterns to materials.
+  Woodblock priting was used for clothing, art, books, etc. Inventions like the typewriter sped up 
+  text printing and eliminated illegible handwriting. Producing books using tools versus handwritten
+  granted the population a low cost affordable priveledge to solved knowledge mitigating rediscoveries.
+  
   Jumping to the industrial age. One of the most important optimizations mankind
   invented were machines. Machines applied to farming accelerated crop productions.
   An abundance of food and minimal set of required harvesting hands freed us from 

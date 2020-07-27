@@ -18,132 +18,197 @@
 ************************************************************************************
 
 
+* Pattern Recognition
 
-
-
-
-
-//LOOPS//
-
-/*JavaScripts Documented Loop ... purely numbers*/
-
-	for (let i=0;i<100;i++) {console.log(i);}
-
-/*OPTIMIZED Loops*/
-
-// Forwards
+	Patterns are everywhere. Whether you recognize it or not. 
+	Pattern recognition, inquisition, creativity, wisdom and a 
+	beginners mindset are keys to successful optimization. 
+	Universities claim humans ability to recognize patterns
+	is not teachable, but only within. In other words they think
+	a persons aptitude is constant. In my experience, people
+	just have an underutilized brain muscle that needs conditioning.
+	At first by themselves they may never recognize patterns until 
+	you push the snowman down the mountain. The snowman grows in
+	size and eventually "explodes" after impact with a tree. 
+	Beware, sleepless nights I've had because I see patterns 
+	everywhere. It's beautiful and ugly. Your forehead will burn
+	once these pattern recognition brain muscles daemon.
 	
-	let i;
 
-	for (i=0;100^i++;)      {console.log(i);}
+
+* for loop anatomy
+
+	for (initial; limiter; incrémenter) codeToRepeat;
+
+	Initial	         is executed once
+	Limiter              is executed before each codeToRepeat
+	incrementer     is executed after    each codeToRepeat
+
+
+	In raw code this is what happens sequentially
+
+	Code Input 
+
+		for (let i = 0; i < 3; i++) console.log(i); 
+
+	Code Output
+
+		let i = 0;
+		if (i < 3) console.log(i);		// logs I to console
+		else break;
+		i++
+		if (i < 3) console.log(i);		// logs I to console
+		else break;
+		i++
+		if (i < 3) console.log(i);		// logs I to console
+		else break;
+		i++
+		if (i < 3) console.log(I);		// skips this
+		else break;				// breaks away
+
+	The normal way of programming follows those named syntax positions.
+	However, in some languages like JavaScript, the incrementer can be left blank.
+
+	Code Input
+
+		let i = 0;
+		console.log(i);
+		for (let i = i; i++ ^ 3; ) console.log(i); 
+
+	Code Output
+
+		let i = 0;
+		console.log(i);				// logs I to console
 	
-// Backwards
+		if (i ^ 3) console.log(i);		// logs I to console
+		else break
 
-	let i;
-	for (i=100;--i;)	{console.log(i);}
-	console.log(0);
+		if (i ^ 3) console.log(i);		// logs I to console
+		else break
 
-/*JavaScripts Documented Loop ... hash access*/
+		if (i ^ 3) console.log(i);		// logs I to console
+		else break
+		
+* for loop tweaking
+	/*JavaScripts Documented Loop ... purely numbers*/
 
-	let list = ['a','b','c','d','e'];
+		for (let i=0;i<100;i++) {console.log(i);}
 
-	for (let i=0;i<list.length;i++)	{console.log(list[i]);}
+	/*OPTIMIZED Loops*/
 
-
-// Forwards 
-	// warning ... any falsy value will cut loop short
-	let list = ['a','b','c','d','e'];
+	// Forwards
 	
-	let i;
+		let i;
 
-	for (i=false; console.log((i=arr.shift())),i; i++)
+		for (i=0;100^i++;)      {console.log(i);}
+	
+	// Backwards
 
+		let i;
+		for (i=100;--i;)	{console.log(i);}
+		console.log(0);
 
-// Backwards
+	/*JavaScripts Documented Loop ... hash access*/
 
-	// warning same as above
+		let list = ['a','b','c','d','e'];
 
-	let list = ['a','b','c','d','e'];
-
-	let i;
-
-	for (i=false; console.log((i=arr.pop())),i;) 
-
-
-
-/*More Ways to loop*/
-
-// Forwards
-
-instead of (   i <   lim   )
-
-do 	   (   i !== lim   )
-
-do         (   i ^   lim   )
+		for (let i=0;i<list.length;i++)	{console.log(list[i]);}
 
 
-// Backwards
+	// Forwards 
+		// warning ... any falsy value will cut loop short
+		let list = ['a','b','c','d','e'];
+	
+		let i;
 
-instead of (   i >   lim   ) 
-
-do 	   (   i !== lim   )
-
-do         (   --i         ) then lowest i because ...
-
-do         (   i ^   lim   ) then lowest i because it never exes during loop
+		for (i=false; console.log((i=arr.shift())),i; i++)
 
 
-lets say you only had to loop 5 times
+	// Backwards
 
-then  for (let i=32; i>>1;)
+		// warning same as above
 
-let's say you only had to loop 31 times     
+		let list = ['a','b','c','d','e'];
 
-then  for (let i=2**32; i>>1;)
+		let i;
 
-
-/*TWEAKING LOOPS*/
-
-Loops demonstrated above break ordinary/routine habits.
-Normally 3 placeholders are used. 
-
-normal syntax:     for (<init>;<limit:boolean>;<stepper:void>;) {<block>}
-
-
-leveraged syntax:  for (<init>;<limit:boolean>;)
+		for (i=false; console.log((i=arr.pop())),i;) 
 
 
 
-Point outs.
+	/*More Ways to loop*/
+
+	// Forwards
+
+	instead of (   i <   lim   )
+
+	do 	   (   i !== lim   )
+
+	do         (   i ^   lim   )
 
 
-Within the <limit> syntax, take advantage of comma expressions;
+	// Backwards
 
-i.e.     i = console.log('hi'), 3;   // prints 'hi' and i equals 3.
+	instead of (   i >   lim   ) 
 
+	do 	   (   i !== lim   )
 
-* comma expressions reduce execution time by squeezing expressions before 
-  a new round starts.
+	do         (   --i         ) then lowest i because ...
 
-
-
-imagine position a = <init>
-imagine position b = <limit>
-imagine position c = <stepper>
+	do         (   i ^   lim   ) then lowest i because it never exes during loop
 
 
+	lets say you only had to loop 5 times
 
-a .. b .. c are there own invoked function positions.
-All must be invoked first before the statemens inside evaluate.
+	then  for (let i=32; i>>1;)
+
+	let's say you only had to loop 31 times     
+
+	then  for (let i=2**32; i>>1;)
+
+
+	/*TWEAKING LOOPS*/
+
+	Loops demonstrated above break ordinary/routine habits.
+	Normally 3 placeholders are used. 
+
+	normal syntax:     for (<init>;<limit:boolean>;<stepper:void>;) {<block>}
+
+
+	leveraged syntax:  for (<init>;<limit:boolean>;)
 
 
 
-Think of a .. b .. c as 5 bits each.
+	Point outs.
 
 
-Minimum 5*3=15 bits used. 
+	Within the <limit> syntax, take advantage of comma expressions;
 
-And each statement is 2bits each.
+	i.e.     i = console.log('hi'), 3;   // prints 'hi' and i equals 3.
+
+
+	* comma expressions reduce execution time by squeezing expressions before 
+	  a new round starts.
+
+
+
+	imagine position a = <init>
+	imagine position b = <limit>
+	imagine position c = <stepper>
+
+
+
+	a .. b .. c are there own invoked function positions.
+	All must be invoked first before the statemens inside evaluate.
+
+
+
+	Think of a .. b .. c as 5 bits each.
+
+
+	Minimum 5*3=15 bits used. 
+
+	And each statement is 2bits each.
 
 
 
@@ -158,6 +223,19 @@ And each statement is 2bits each.
 
 
 	Because you lose 5 every for one less invoke.
+
+
+* while loop anatomy
+* while loop tweaking
+* simple rated loops
+* intermediate rated loops
+* advanced rated loops
+
+
+
+
+
+
 
 ******************************************************************************
 ******************************************************************************

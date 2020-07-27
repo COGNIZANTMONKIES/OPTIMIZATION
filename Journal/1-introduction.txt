@@ -48,8 +48,8 @@ Origins of Optimization
   of buildings saved us from extra chopping, cutting, and relocation.
   
   Printing is by far one of the most impactful optimizations mankind produced. Rethink the meaning of
-  printing as anything that replicates. Printing can be thought of as manufacturing vehicles or even 
-  the assembly line to create wooden pencils. They start from resources then convert into a final product.
+  printing as anything that replicates. Printing can be thought of as manufacturing vehicles, 
+  the assembly line to create wooden pencils or even the transfer of knowledge.
   A wikipedia article claims early recognition of printing was around 200AD from China. The method was called 
   Woodblock Printing which easily allowed duplications for printing text, images or patterns to materials.
   Woodblock priting was used for clothing, art, books, etc. Inventions like the typewriter sped up 

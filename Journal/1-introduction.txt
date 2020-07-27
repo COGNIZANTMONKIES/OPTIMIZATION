@@ -17,7 +17,20 @@
 ###		Introduction
 ##############################################################################
 
-Why Practice Optimization?
+What is Optimization?
+
+  An invention is a crafted tool to perform a job duty likely with the intention
+  to speed up production or relieve humans of harmful working conditions. 
+  Usually the inventions first iteration itself is considered an optimization but 
+  performs marginally unacceptional for purchasing price, thus fine tuning
+  further iterations follows until an optimal point is met. These optimal
+  points can be of many things requested such as the output rate, 
+  lower consumption of resources, noise reduction, cosmetically attractive,
+  bio anotomical conforming (apple air pods ear phones), and etc.
+  This book will focus on performance optimizations as algorithms
+  consume resources and have processing rates.
+
+Why Practice Software Optimization?
 
 * lowers electric bills
 * lowers hardware bill
@@ -59,25 +72,25 @@ Origins of Optimization
   Jumping to the industrial age. One of the most important optimizations mankind
   invented were machines. Machines applied to farming accelerated crop productions.
   An abundance of food and minimal set of required harvesting hands freed us from 
-  living off the land as a way of life. With free pairs of available, we moved
+  living off the land as a way of life. With free pairs of hands available, we moved
   onto new inventions inspired by machines. An electrical powered computer
-  was conceived. Calculations crunched at mouth dropping speeds. A new set of
+  was conceived. Numbers crunched at mindblowing speeds. A new set of
   free hands/minds available again. Computers then versus now were terribly slow.
-  About a million times slower. Our ambitions demanded faster hardware and faster software.
-  It's 2020, were in the era of Artificial Intelligence. Computer are millions of times faster
+  About a million times slower. Our ambitions demand faster hardware and software.
+  It's 2020, were in the era of Artificial Intelligence. Computers are millions of times faster
   than it's conception. Even with all this speed, AI calculations take weeks, months, and sometimes years.
   Hardware optimizations are reaching there limitations. Software optimizations were ignored because
-  of the high cost of an engineer and the cheapness of purchasing faster hardware. 
+  of the high cost of an engineer weighed against the cheapness of purchasing faster hardware next year. 
   The impact of fast hardware is nothing compared to optimized software. This book will teach
-  you the practice of thinking differently because optimization demands new perception
+  you the practice of thinking differently because optimization demands broad perception
   to solve problems.
   
 Financial Savings of Software Optimization  
 
-  Imagine a supercomputer computes for 3 months. The total electricity bill is 3 million dollars.
-  The engineering staff cost is 3 million dollars. A total of 6 million dollars.
+  Imagine a supercomputer computes for 3 months. The total electricity bill is 160 million dollars.
+  The supercomputer cost 200 million dollars. The 3 month engineering staff cost 30 million dollars.
   Now imagine you tweaked a few bottlenecked algorithms. The supercomputer runs the next round of calculations
-  and takes 1 month. You now saved 4 million dollars. What do you think your salary cut should be?
+  and takes 1 month. What do you think your salary cut should be?
   I once wrote an algorithm to identify prime numbers. For numbers in the billions, the baselevel algorithm
   figured out the problem in 16 seconds. My approach was very different. I reduced the search space to 
   a tiny sliver on the pi chart. The optimized algorithm could conclude numbers in the billions prime or not in about
@@ -89,9 +102,9 @@ Financial Savings of Software Optimization
 Intentional Focus
 
   In order to comprehend this book, readers must be competent algorithm writers and a fluent 
-  understanding in a programming languages. In my eyes, there are 10 stepping stone fundamentals 
+  understanding in a programming language. In my eyes, there are 10 stepping stone fundamentals 
   to software optimization. Our main focus is the most important fundamental as it's in your 
-  control and has the largest performance impact. Logical approach. Compilers have there own optimizations 
+  control and has the largest performance impact. Logical/Algorithmic approach. Compilers have there own optimizations 
   but never modify the "a-z steps" to solve a problem. At most the compiler substitutes computer operations 
   with faster operations. Practioners will only learn by conjuring there own solutions. Currently, 
   the only algorithm to optimize algorithms is exposing programmers to contrastable samples hoping 

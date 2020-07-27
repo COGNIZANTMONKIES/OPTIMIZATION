@@ -34,8 +34,233 @@
 	everywhere. It's beautiful and ugly. Your forehead will burn
 	once these pattern recognition brain muscles daemon.
 	
-
-
+	In programming, your pattern recognition skills are 
+	most noticeable by writing loops or logarithmic algorithms or constant algorithms. 
+	Loops repeat code along with the modifications of the repeated code.
+	
+	Simple to more complex patterns will be demonstrated.
+	Follow along with each exercise, find each pattern or patterns
+	before looking up answers. Exercises will subjectively progress
+	from basic to harder.
+	
+	Sample 0)
+	
+		Outputs
+		
+			0
+			1
+			2
+			3
+			0
+			1
+			2
+			3
+			0
+			1
+			2
+			3
+			
+		Solution Explained
+		
+			0 A
+			1 B
+			2 C
+			3 D
+			0 A
+			1 B
+			2 C
+			3 D
+			0 A
+			1 B
+			2 C
+			3 D
+			
+			A = 0
+			B = 1
+			C = 2
+			D = 3
+			
+			(A,B,C,D) repeats 3 times
+			
+			JavaScript Implementations
+				
+				// implementation 0
+				
+				for (let j = 0; j < 3; j++) {
+					for (let i = 1; i < 5; i++) console.log(i);
+				}
+				
+				// implemetation 1 // loop broken up for optimization reasons
+				
+				for (let j = 0; j < 3; j++) {
+					console.log(0);
+					console.log(1);
+					console.log(2);
+					console.log(3);
+				}
+				
+	Sample 1)
+		
+		Outputs
+		
+			1
+			1
+			2
+			1
+			2
+			3
+			1
+			2
+			3
+			4
+		
+		Solution
+			
+			1 A
+			1 A
+			2 B
+			1 A
+			2 B
+			3 C
+			1 A
+			2 B 
+			3 C
+			4 D
+			
+			A = 1
+			B = 2
+			C = 3
+			D = 4
+			
+			(A,B,C,D) repeats by divisable increments (downward staircases)
+			
+			in other words
+			
+			(A)
+			(A,B)
+			(A,B,C)
+			(A,B,C,D)
+			
+			JavaScript Implementations
+			
+				// implementation 0
+				
+				for (let j = 1; j < 4; j++) {
+					for (let i = 1; i <= j; i++) {
+						console.log(i);
+					}
+				}
+				
+		
+	Exercise 0)
+		Outputs
+		Solution
+	Exercise 1)
+		Outputs
+		Solution
+	Exercise 2)
+		Outputs
+		Solution
+	Exercise 3)
+		Outputs
+		Solution
+	Exercise 4)
+		Outputs
+		Solution
+	Exercise 5)
+		Outputs
+		Solution
+	Exercise 6)
+ 		Outputs
+		Solution
+	Exercise 7)
+		Outputs
+		Solution
+	Exercise 8)
+		Outputs
+		Solution
+	Exercise 9)
+		Outputs
+		Solution
+	Exercise A)
+		Outputs
+		Solution
+	Exercise B)
+		Outputs
+		Solution
+	Exercise C)
+		Outputs
+		Solution
+	Exercise D)
+		Outputs
+		Solution
+	Exercise E)
+		Outputs
+		Solution
+	Exercise F)
+		Outputs
+		Solution
+	Exercise G)
+		Outputs
+		Solution
+	Exercise H)
+		Outputs
+		Solution
+	Exercise I)
+		Outputs
+		Solution
+	Exercise J)
+		Outputs
+		Solution
+	Exercise K)
+		Outputs
+		Solution
+	Exercise L)
+		Outputs
+		Solution
+	Exercise M)
+		Outputs
+		Solution
+	Exercise N)
+		Outputs
+		Solution
+	Exercise O)
+		Outputs
+		Solution
+	Exercise P)
+		Outputs
+		Solution
+	Exercise Q)
+		Outputs
+		Solution
+	Exercise R)
+		Outputs
+		Solution
+	Exercise S)
+		Outputs
+		Solution
+	Exercise T)
+		Outputs
+		Solution
+	Exercise U)
+		Outputs
+		Solution
+	Exercise V)
+		Outputs
+		Solution
+	Exercise W)
+		Outputs
+		Solution
+	Exercise X)
+		Outputs
+		Solution
+	Exercise Y)
+		Outputs
+		Solution
+	Exercise Z)
+		Outputs
+		Solution
+	
 * for loop anatomy
 
 	for (initial; limiter; incrémenter) codeToRepeat;

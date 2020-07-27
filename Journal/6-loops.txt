@@ -153,25 +153,116 @@
 				
 		
 	Exercise 0)
+	
 		Outputs
+		
+			0
+			1
+			2
+			0
+			1
+			2
+			0
+			1
+			2
+			
 		Solution
+		
 	Exercise 1)
 		Outputs
+		
+			01
+			012
+			01
+			012
+			01
+			012
+		
 		Solution
 	Exercise 2)
 		Outputs
+			
+			01
+			012
+			0123
+			012
+			01
+			012
+			0123
+			012
+			01
+			012
+			0123
+			012
+			01
+			012
+			0123
+			012
+		
 		Solution
 	Exercise 3)
 		Outputs
+		
+			5
+			4
+			3
+			4
+			3
+			2
+			3
+			2
+			1
+			
 		Solution
 	Exercise 4)
 		Outputs
+
+			1234
+			123
+			12
+			1
+			12
+			123
+			1234
+			123
+			12
+			1
+			12
+			123
+			1234
+			123
+			12
+			1
+			12
+			123
+			1234
+
 		Solution
 	Exercise 5)
+	
 		Outputs
+		
+			12321
+			23432
+			34545
+			45654
+			56765
+			67876
+			78987
+			
 		Solution
+	
 	Exercise 6)
+	
  		Outputs
+		
+			123
+			321
+			234
+			432
+			345
+			543
+		
 		Solution
 	Exercise 7)
 		Outputs

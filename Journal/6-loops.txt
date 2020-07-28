@@ -40,8 +40,14 @@
 	
 	Simple to more complex patterns will be demonstrated.
 	Follow along with each exercise, find each pattern or patterns
-	before looking up answers. Exercises will subjectively progress
-	from basic to harder.
+	before looking up solutions. Try to write multiple solutions. 
+	Figureout which solution is faster.
+	Exercises will subjectively progress
+	from basic to complexer.
+	
+	Exercises 0 -> B	Generic   Pattern Recognition
+	Exercises C -> N	Numerical Pattern Recognition
+	Exercises Q -> Z	Code	  Pattern Recognition
 	
 	Sample 0)
 	
@@ -171,33 +177,33 @@
 	Exercise 1)
 		Outputs
 		
-			01
-			012
-			01
-			012
-			01
-			012
+			`01`
+			`012`
+			`01`
+			`012`
+			`01`
+			`012`
 		
 		Solution
 	Exercise 2)
 		Outputs
 			
-			01
-			012
-			0123
-			012
-			01
-			012
-			0123
-			012
-			01
-			012
-			0123
-			012
-			01
-			012
-			0123
-			012
+			`01`
+			`012`
+			`0123`
+			`012`
+			`01`
+			`012`
+			`0123`
+			`012`
+			`01`
+			`012`
+			`0123`
+			`012`
+			`01`
+			`012`
+			`0123`
+			`012`
 		
 		Solution
 	Exercise 3)
@@ -217,38 +223,38 @@
 	Exercise 4)
 		Outputs
 
-			1234
-			123
-			12
-			1
-			12
-			123
-			1234
-			123
-			12
-			1
-			12
-			123
-			1234
-			123
-			12
-			1
-			12
-			123
-			1234
+			`1234`
+			`123`
+			`12`
+			`1`
+			`12`
+			`123`
+			`1234`
+			`123`
+			`12`
+			`1`
+			`12`
+			`123`
+			`1234`
+			`123`
+			`12`
+			`1`
+			`12`
+			`123`
+			`1234`
 
 		Solution
 	Exercise 5)
 	
 		Outputs
 		
-			12321
-			23432
-			34545
-			45654
-			56765
-			67876
-			78987
+			`12321`
+			`23432`
+			`34545`
+			`45654`
+			`56765`
+			`67876`
+			`78987`
 			
 		Solution
 	
@@ -256,12 +262,12 @@
 	
  		Outputs
 		
-			123
-			321
-			234
-			432
-			345
-			543
+			`123`
+			`321`
+			`234`
+			`432`
+			`345`
+			`543`
 		
 		Solution
 		
@@ -286,15 +292,15 @@
 	
 		Outputs
 		
-			0,0
-			0,1
-			0,2
-			1,0
-			1,1
-			1,2
-			3,0
-			3,1
-			3,2
+			`00`
+			`01`
+			`02`
+			`10`
+			`11`
+			`12`
+			`30`
+			`31`
+			`32`
 		
 		Solution
 		
@@ -302,32 +308,99 @@
 	
 		Outputs
 		
-			0,0,0
-			0,0,1
-			0,1,0
-			0,1,1
-			1,0,0
-			1,0,1
-			1,1,0
-			1,1,1
+			`000`
+			`001`
+			`010`
+			`011`
+			`100`
+			`101`
+			`110`
+			`111`
 			
 		Solution
 		
 	Exercise A)
+	
 		Outputs
+		
+			`0123`
+			`1234`
+			`2345`
+			`3456`
+			`4567`
+			`5678`
+			`6789`
+		
 		Solution
+		
 	Exercise B)
+	
 		Outputs
+		
+			`0123`
+			`1032`
+			`2345`
+			`3254`
+			`4567`
+			`5476`
+			`6789`
+			`7698`
+			
 		Solution
+		
 	Exercise C)
+	
 		Outputs
+			
+			// count to 10,000, print even numbers only
+			
+			0
+			2
+			4
+			6
+			8
+			10
+			12
+			14
+			16
+			...
+			10000
+			
+		
 		Solution
+		
 	Exercise D)
+	
 		Outputs
+			// print these 3 seperate values as fast as possible 10,000 times
+			
+			0
+			1
+			2
+			... 10,000 times
+			
 		Solution
+		
 	Exercise E)
+	
 		Outputs
+		
+			// print multiples of 5 upto 10,000
+			
+			5
+			10
+			15
+			20
+			25
+			30
+			35
+			40
+			...
+			10,000
+		
 		Solution
+		
+		
 	Exercise F)
 		Outputs
 		Solution

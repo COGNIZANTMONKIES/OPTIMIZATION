@@ -840,7 +840,24 @@
 	
 		Outputs
 		
-				
+			// write a javascript loop that creates an n x n grid; run from 1 to 5000 n.	
+			
+			// 1,1
+			[
+				[]
+			]
+			
+			// 2,2
+			[
+				[[],[]]
+				[[],[]]
+			]
+			// 3,3
+			[
+				[[],[],[]],
+				[[],[],[]],
+				[[],[],[]]
+			]
 		
 		Solution
 		

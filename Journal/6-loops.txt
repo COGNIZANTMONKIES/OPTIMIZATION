@@ -7,16 +7,203 @@
 ************************************************************************************
       Outline
 ************************************************************************************
-* Pattern Recognition
 * for loop anatomy
 * for loop tweaking
 * while loop anatomy
 * while loop tweaking
-* simple rated loops
-* intermediate rated loops
-* advanced rated loops
+* Pattern Recognition
 ************************************************************************************
 
+* for loop anatomy
+
+	for (initial; limiter; incrémenter) codeToRepeat;
+
+	Initial	         is executed once
+	Limiter              is executed before each codeToRepeat
+	incrementer     is executed after    each codeToRepeat
+
+
+	In raw code this is what happens sequentially
+
+	Code Input 
+
+		for (let i = 0; i < 3; i++) console.log(i); 
+
+	Code Output
+
+		let i = 0;
+		if (i < 3) console.log(i);		// logs I to console
+		else break;
+		i++
+		if (i < 3) console.log(i);		// logs I to console
+		else break;
+		i++
+		if (i < 3) console.log(i);		// logs I to console
+		else break;
+		i++
+		if (i < 3) console.log(I);		// skips this
+		else break;				// breaks away
+
+	The normal way of programming follows those named syntax positions.
+	However, in some languages like JavaScript, the incrementer can be left blank.
+
+	Code Input
+
+		let i = 0;
+		console.log(i);
+		for (let i = i; i++ ^ 3; ) console.log(i); 
+
+	Code Output
+
+		let i = 0;
+		console.log(i);				// logs I to console
+	
+		if (i ^ 3) console.log(i);		// logs I to console
+		else break
+
+		if (i ^ 3) console.log(i);		// logs I to console
+		else break
+
+		if (i ^ 3) console.log(i);		// logs I to console
+		else break
+		
+* for loop tweaking
+	/*JavaScripts Documented Loop ... purely numbers*/
+
+		for (let i=0;i<100;i++) {console.log(i);}
+
+	/*OPTIMIZED Loops*/
+
+	// Forwards
+	
+		let i;
+
+		for (i=0;100^i++;)      {console.log(i);}
+	
+	// Backwards
+
+		let i;
+		for (i=100;--i;)	{console.log(i);}
+		console.log(0);
+
+	/*JavaScripts Documented Loop ... hash access*/
+
+		let list = ['a','b','c','d','e'];
+
+		for (let i=0;i<list.length;i++)	{console.log(list[i]);}
+
+
+	// Forwards 
+		// warning ... any falsy value will cut loop short
+		let list = ['a','b','c','d','e'];
+	
+		let i;
+
+		for (i=false; console.log((i=arr.shift())),i; i++)
+
+
+	// Backwards
+
+		// warning same as above
+
+		let list = ['a','b','c','d','e'];
+
+		let i;
+
+		for (i=false; console.log((i=arr.pop())),i;) 
+
+
+
+	/*More Ways to loop*/
+
+	// Forwards
+
+	instead of (   i <   lim   )
+
+	do 	   (   i !== lim   )
+
+	do         (   i ^   lim   )
+
+
+	// Backwards
+
+	instead of (   i >   lim   ) 
+
+	do 	   (   i !== lim   )
+
+	do         (   --i         ) then lowest i because ...
+
+	do         (   i ^   lim   ) then lowest i because it never exes during loop
+
+
+	lets say you only had to loop 5 times
+
+	then  for (let i=32; i>>1;)
+
+	let's say you only had to loop 31 times     
+
+	then  for (let i=2**32; i>>1;)
+
+
+	/*TWEAKING LOOPS*/
+
+	Loops demonstrated above break ordinary/routine habits.
+	Normally 3 placeholders are used. 
+
+	normal syntax:     for (<init>;<limit:boolean>;<stepper:void>;) {<block>}
+
+
+	leveraged syntax:  for (<init>;<limit:boolean>;)
+
+
+
+	Point outs.
+
+
+	Within the <limit> syntax, take advantage of comma expressions;
+
+	i.e.     i = console.log('hi'), 3;   // prints 'hi' and i equals 3.
+
+
+	* comma expressions reduce execution time by squeezing expressions before 
+	  a new round starts.
+
+
+
+	imagine position a = <init>
+	imagine position b = <limit>
+	imagine position c = <stepper>
+
+
+
+	a .. b .. c are there own invoked function positions.
+	All must be invoked first before the statemens inside evaluate.
+
+
+
+	Think of a .. b .. c as 5 bits each.
+
+
+	Minimum 5*3=15 bits used. 
+
+	And each statement is 2bits each.
+
+
+
+	... = statements
+
+	a:(5+ ...)   +     b:(5+ ...)   +   c:(5+ ...
+
+	_____________________________________________
+
+
+	Now you see why squeezing them together is better.
+
+
+	Because you lose 5 every for one less invoke.
+
+* while loop anatomy
+* while loop tweaking
 
 * Pattern Recognition
 
@@ -59,6 +246,7 @@
 	Exercises 0 -> B	Generic   Pattern Recognition
 	Exercises C -> N	Numerical Pattern Recognition
 	Exercises Q -> Z	Code	  Pattern Recognition
+	Exercises a -> l	Mutation  Pattern Recognition
 	
 	
 	Exercise <n>)
@@ -119,7 +307,7 @@
 					for (let i = 1; i < 5; i++) console.log(i);
 				}
 				
-				// implemetation 1 // loop broken up for optimization reasons
+				// implementation 1 // loop broken up for optimization reasons
 				
 				for (let j = 0; j < 3; j++) {
 					console.log(0);
@@ -535,27 +723,113 @@
 	Exercise O)
 	
 		Outputs
-		
-
+			// write a loop representing the html, 
+			// then print the solution as fast as you can 10,000 times
+			<ul>
+				<li>0</li>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+			<ul>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+			</ul>
+			<ul>
+				<li>8</li>
+				<li>9</li>
+				<li>10</li>
+				<li>11</li>
+			</ul>
+			<ul>
+				<li>12</li>
+				<li>13</li>
+				<li>14</li>
+				<li>15</li>
+			</ul>
 					
 		Solution
 		
 	Exercise P)
 	
 		Outputs
-		
-
-		
+			// write a loop representing the html, 
+			// then print the solution as fast as you can 10,000 times
+			<div>
+				<h1></h1>
+				<img></img>
+				<p></p>
+			</div>
+			<div>
+				<h2></h2>
+				<p></p>
+				<img></img>
+			</div>
+			<div>
+				<h3></h3>
+				<img></img>
+				<p></p>
+			</div>
+			<div>
+				<h4></h4>
+				<p></p>
+				<img></img>
+			</div>
+			<div>
+				<h5></h5>
+				<img></img>
+				<p></p>
+			</div>
+			<div>
+				<h6></h6>
+				<p></p>
+				<img></img>
+			</div>		
 		Solution
 		
 		
 		
 	Exercise Q)
+	
 		Outputs
+			// write a loop that creates n nestations of divs.
+			// pay attention to the spaced out positioning
+			<div>
+				<div>
+				</div>
+				<div>			
+					<div>
+					</div>
+				</div>
+				<div>			
+					<div>
+						<div>
+						</div>
+					</div>
+				</div>
+				<div>			
+					<div>
+						<div>
+							<div>
+							</div>
+						</div>
+					</div>
+				</div>
+				...
+			</div>
+		
 		Solution
+		
 	Exercise R)
+	
 		Outputs
+		
+			
+		
 		Solution
+		
 	Exercise S)
 		Outputs
 		Solution
@@ -580,207 +854,3 @@
 	Exercise Z)
 		Outputs
 		Solution
-	
-* for loop anatomy
-
-	for (initial; limiter; incrémenter) codeToRepeat;
-
-	Initial	         is executed once
-	Limiter              is executed before each codeToRepeat
-	incrementer     is executed after    each codeToRepeat
-
-
-	In raw code this is what happens sequentially
-
-	Code Input 
-
-		for (let i = 0; i < 3; i++) console.log(i); 
-
-	Code Output
-
-		let i = 0;
-		if (i < 3) console.log(i);		// logs I to console
-		else break;
-		i++
-		if (i < 3) console.log(i);		// logs I to console
-		else break;
-		i++
-		if (i < 3) console.log(i);		// logs I to console
-		else break;
-		i++
-		if (i < 3) console.log(I);		// skips this
-		else break;				// breaks away
-
-	The normal way of programming follows those named syntax positions.
-	However, in some languages like JavaScript, the incrementer can be left blank.
-
-	Code Input
-
-		let i = 0;
-		console.log(i);
-		for (let i = i; i++ ^ 3; ) console.log(i); 
-
-	Code Output
-
-		let i = 0;
-		console.log(i);				// logs I to console
-	
-		if (i ^ 3) console.log(i);		// logs I to console
-		else break
-
-		if (i ^ 3) console.log(i);		// logs I to console
-		else break
-
-		if (i ^ 3) console.log(i);		// logs I to console
-		else break
-		
-* for loop tweaking
-	/*JavaScripts Documented Loop ... purely numbers*/
-
-		for (let i=0;i<100;i++) {console.log(i);}
-
-	/*OPTIMIZED Loops*/
-
-	// Forwards
-	
-		let i;
-
-		for (i=0;100^i++;)      {console.log(i);}
-	
-	// Backwards
-
-		let i;
-		for (i=100;--i;)	{console.log(i);}
-		console.log(0);
-
-	/*JavaScripts Documented Loop ... hash access*/
-
-		let list = ['a','b','c','d','e'];
-
-		for (let i=0;i<list.length;i++)	{console.log(list[i]);}
-
-
-	// Forwards 
-		// warning ... any falsy value will cut loop short
-		let list = ['a','b','c','d','e'];
-	
-		let i;
-
-		for (i=false; console.log((i=arr.shift())),i; i++)
-
-
-	// Backwards
-
-		// warning same as above
-
-		let list = ['a','b','c','d','e'];
-
-		let i;
-
-		for (i=false; console.log((i=arr.pop())),i;) 
-
-
-
-	/*More Ways to loop*/
-
-	// Forwards
-
-	instead of (   i <   lim   )
-
-	do 	   (   i !== lim   )
-
-	do         (   i ^   lim   )
-
-
-	// Backwards
-
-	instead of (   i >   lim   ) 
-
-	do 	   (   i !== lim   )
-
-	do         (   --i         ) then lowest i because ...
-
-	do         (   i ^   lim   ) then lowest i because it never exes during loop
-
-
-	lets say you only had to loop 5 times
-
-	then  for (let i=32; i>>1;)
-
-	let's say you only had to loop 31 times     
-
-	then  for (let i=2**32; i>>1;)
-
-
-	/*TWEAKING LOOPS*/
-
-	Loops demonstrated above break ordinary/routine habits.
-	Normally 3 placeholders are used. 
-
-	normal syntax:     for (<init>;<limit:boolean>;<stepper:void>;) {<block>}
-
-
-	leveraged syntax:  for (<init>;<limit:boolean>;)
-
-
-
-	Point outs.
-
-
-	Within the <limit> syntax, take advantage of comma expressions;
-
-	i.e.     i = console.log('hi'), 3;   // prints 'hi' and i equals 3.
-
-
-	* comma expressions reduce execution time by squeezing expressions before 
-	  a new round starts.
-
-
-
-	imagine position a = <init>
-	imagine position b = <limit>
-	imagine position c = <stepper>
-
-
-
-	a .. b .. c are there own invoked function positions.
-	All must be invoked first before the statemens inside evaluate.
-
-
-
-	Think of a .. b .. c as 5 bits each.
-
-
-	Minimum 5*3=15 bits used. 
-
-	And each statement is 2bits each.
-
-
-
-	... = statements
-
-	a:(5+ ...)   +     b:(5+ ...)   +   c:(5+ ...
-
-	_____________________________________________
-
-
-	Now you see why squeezing them together is better.
-
-
-	Because you lose 5 every for one less invoke.
-
-
-* while loop anatomy
-* while loop tweaking
-* simple rated loops
-* intermediate rated loops
-* advanced rated loops
-
-
-
-
-
-
-
-******************************************************************************
-******************************************************************************

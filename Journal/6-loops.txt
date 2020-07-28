@@ -265,8 +265,22 @@
 		
 		Solution
 	Exercise 7)
+	
 		Outputs
+			
+			3
+			2
+			1
+			6
+			5
+			4
+			9
+			8
+			7
+			
 		Solution
+		
+		
 	Exercise 8)
 		Outputs
 		Solution

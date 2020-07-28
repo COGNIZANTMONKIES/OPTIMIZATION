@@ -467,34 +467,89 @@
 	
 		Outputs
 			
-			// print solutions found everywhere
+			// print the sum of digits from range 1 -> n 
 			
 		Solution
 		
 	Exercise I)
+	
 		Outputs
+		
+			// print the sum of odd digits from range 1 -> n
+			
 		Solution
+		
 	Exercise J)
+	
 		Outputs
+		
+			// print the sum of digits dividable by 4 from range 1 -> n
+		
 		Solution
+		
 	Exercise K)
+	
 		Outputs
+			
+			// print the sum of digits dividable by 4 from range 1 -> n
+			
 		Solution
+		
 	Exercise L)
+	
 		Outputs
+		
+			// print the sum of digits that endwiths a 2 from range 1 -> n
+		
 		Solution
+		
 	Exercise M)
+	
 		Outputs
+			
+			// print 10 to the power of whole number n as fast as possible
+			
 		Solution
+		
+		
 	Exercise N)
+	
 		Outputs
+		
+			// identify any number is prime or not from 1 -> pow(2,32) - 1
+			
+			0 3
+			1 4
+			0 5
+			1 6
+			0 7
+			1 8
+			1 9 
+			1 10
+			0 11
+			...
+			pow(2,32)
+		
 		Solution
+		
 	Exercise O)
+	
 		Outputs
+		
+
+					
 		Solution
+		
 	Exercise P)
+	
 		Outputs
+		
+
+		
 		Solution
+		
+		
+		
 	Exercise Q)
 		Outputs
 		Solution

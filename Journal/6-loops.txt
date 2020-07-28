@@ -825,7 +825,8 @@
 	Exercise R)
 	
 		Outputs
-			// write a javascript loop that print stairsteps of A-Z 10000 times.
+		
+			// write a javascript loop that print stairsteps of A-Z 10000 times as fast as possible
 			'A'
 			'AB'
 			'ABC'
@@ -836,8 +837,13 @@
 		Solution
 		
 	Exercise S)
+	
 		Outputs
+		
+				
+		
 		Solution
+		
 	Exercise T)
 		Outputs
 		Solution

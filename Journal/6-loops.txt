@@ -840,7 +840,7 @@
 	
 		Outputs
 		
-			// write a javascript loop that creates an n x n grid; run from 1 to 5000 n.	
+			// write a javascript loop that creates an n x n grid; run n from 1 to 5000 .	
 			
 			// 1,1
 			[
@@ -862,8 +862,18 @@
 		Solution
 		
 	Exercise T)
+	
 		Outputs
+		
+			// generates the factorials of n and the product of factorials
+			// this will only increment upwards by 1.
+			// do this upto 300
+			
+			n is 3 // factorials are 1 2 3 product is 6
+			n is 4 // factorials are 1 2 3 4 product is 24
+		
 		Solution
+		
 	Exercise U)
 		Outputs
 		Solution

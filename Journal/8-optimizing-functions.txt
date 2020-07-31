@@ -412,3 +412,22 @@ translate back ----> apply 5 to m.
 We've identified a system so fast, it can remain in the computers cache
 ***
 
+
+
+
+* rewriting conditions
+* simple rated algorithms
+* intermediate rated algorithms
+* advanced rated algorithm
+
+
+
+
+
+
+
+
+
+
+
+

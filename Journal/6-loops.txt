@@ -32,13 +32,13 @@
 	Code Output
 
 		let i = 0;
-		if (i < 3) console.log(i);		// logs I to console
+		if (i < 3) console.log(i);		// logs i to console
 		else break;
 		i++
-		if (i < 3) console.log(i);		// logs I to console
+		if (i < 3) console.log(i);		// logs i to console
 		else break;
 		i++
-		if (i < 3) console.log(i);		// logs I to console
+		if (i < 3) console.log(i);		// logs i to console
 		else break;
 		i++
 		if (i < 3) console.log(I);		// skips this
@@ -51,159 +51,156 @@
 
 		let i = 0;
 		console.log(i);
-		for (let i = i; i++ ^ 3; ) console.log(i); 
+		for (i = i; i++ ^ 3; ) console.log(i); 
 
 	Code Output
 
 		let i = 0;
-		console.log(i);				// logs I to console
+		console.log(i);				// logs i to console
 	
-		if (i ^ 3) console.log(i);		// logs I to console
+		if (i ^ 3) console.log(i);		// logs i to console
 		else break
 
-		if (i ^ 3) console.log(i);		// logs I to console
+		if (i ^ 3) console.log(i);		// logs i to console
 		else break
 
-		if (i ^ 3) console.log(i);		// logs I to console
+		if (i ^ 3) console.log(i);		// logs i to console
 		else break
 		
 * for loop tweaking
-	/*JavaScripts Documented Loop ... purely numbers*/
+	JavaScripts Documented Loop ... purely numbers
 
 		for (let i=0;i<100;i++) {console.log(i);}
 
-	/*OPTIMIZED Loops*/
+	OPTIMIZED Loops
 
-	// Forwards
+	  Looping Forwards
+		
+		// prints 0 -> 100
+		
+		let i;			// notice i is declared outside of the loop
+		for (i=-1;100^i++;)	console.log(i);
+		
 	
-		let i;
+	  Looping Backwards
+		
+		// prints 100 -> 0
+		
+		let i;			// notice i is declared outside of the loop
+		for (i=100;--i;)	console.log(i);
+		console.log(0);		// compensates the limiters falsy flag
+					// loop stops at 0, so 0 must be logged seperately
 
-		for (i=0;100^i++;)      {console.log(i);}
-	
-	// Backwards
-
-		let i;
-		for (i=100;--i;)	{console.log(i);}
-		console.log(0);
-
-	/*JavaScripts Documented Loop ... hash access*/
-
+	JavaScripts Documented Loop ... hash access
+		
+		// this is a normal way of looping, but below is a better way
+		
 		let list = ['a','b','c','d','e'];
 
-		for (let i=0;i<list.length;i++)	{console.log(list[i]);}
+		for (let i = 0; i < list.length;i++)	{console.log(list[i]);}
 
 
-	// Forwards 
+	  Forwards 
+	
 		// warning ... any falsy value will cut loop short
+		// notice, the list array is being deleted while traversing with .shift()
+		// notice the .log() statement crammed into the limiters position, it reduces some assembly code
+		
 		let list = ['a','b','c','d','e'];
 	
 		let i;
 
-		for (i=false; console.log((i=arr.shift())),i; i++)
+		for (i=false; console.log((i=list.shift())),i; i++)
 
 
-	// Backwards
+	  Backwards
 
-		// warning same as above
+		// warning ... any falsy value will cut loop short
+		// notice, the list array is being deleted while traversing with .shift()
+		// notice the .log() statement crammed into the limiters position, it reduces some assembly code
 
 		let list = ['a','b','c','d','e'];
 
 		let i;
 
-		for (i=false; console.log((i=arr.pop())),i;) 
+		for (i=false; console.log((i=list.pop())),i;) 
 
 
+	Common Operator Optimizations
 
-	/*More Ways to loop*/
+	  Looping Forwards
 
-	// Forwards
+	  	instead of (   i  <  lim   ) let i; for (i = 0; i  <  lim; i++)
+		do 	   (   i !== lim   ) let i; for (i = 0; i !== lim; i++)
+		do         (   i  ^  lim   ) let i; for (i = 0; i  ^  lim; i++)
+		
+		becareful about unexpected truthy and falsy values
 
-	instead of (   i <   lim   )
+	  Looping Backwards
 
-	do 	   (   i !== lim   )
+		instead of (   i  >= lim   ) let i; for (i = 100; i  >=  0; i--)
+		do         (   i  >  lim   ) let i; for (i = 100; i  >  -1; i--)
+		do 	   (   i !== lim   ) let i; for (i = 100; i !== -1; i--)
+		do         (     --i       ) let i; for (i = 101;   --i;       )
+		do         (   i  ^  lim   ) let i; for (i = 101; --i ^ 0;     )
 
-	do         (   i ^   lim   )
+		becareful about unexpected truthy and falsy values
 
+	
+	Bit Manipulation Awareness versus Arithmetic Manipulations
 
-	// Backwards
+	  lets say you only had to loop 5 times then  
+	  
+	  instead of
+	  	
+		let i; for (i = 5; --i;      )
+		
+	  do
+		
+		let i; for (i = 32; i >>= 1; ) 
 
-	instead of (   i >   lim   ) 
-
-	do 	   (   i !== lim   )
-
-	do         (   --i         ) then lowest i because ...
-
-	do         (   i ^   lim   ) then lowest i because it never exes during loop
-
-
-	lets say you only had to loop 5 times
-
-	then  for (let i=32; i>>1;)
-
-	let's say you only had to loop 31 times     
-
-	then  for (let i=2**32; i>>1;)
-
-
-	/*TWEAKING LOOPS*/
-
-	Loops demonstrated above break ordinary/routine habits.
-	Normally 3 placeholders are used. 
-
-	normal syntax:     for (<init>;<limit:boolean>;<stepper:void>;) {<block>}
-
-
-	leveraged syntax:  for (<init>;<limit:boolean>;)
-
-
-
-	Point outs.
-
-
-	Within the <limit> syntax, take advantage of comma expressions;
-
-	i.e.     i = console.log('hi'), 3;   // prints 'hi' and i equals 3.
-
-
-	* comma expressions reduce execution time by squeezing expressions before 
-	  a new round starts.
-
-
-
-	imagine position a = <init>
-	imagine position b = <limit>
-	imagine position c = <stepper>
-
-
-
-	a .. b .. c are there own invoked function positions.
-	All must be invoked first before the statemens inside evaluate.
-
-
-
-	Think of a .. b .. c as 5 bits each.
-
-
-	Minimum 5*3=15 bits used. 
-
-	And each statement is 2bits each.
-
-
-
-	... = statements
-
-	a:(5+ ...)   +     b:(5+ ...)   +   c:(5+ ...
-
-	_____________________________________________
-
-
-	Now you see why squeezing them together is better.
-
-
-	Because you lose 5 every for one less invoke.
-
+	  let's say you only had to loop 31 times then  
+	  
+	  instead of 
+	  
+		let i; for (i = 32; --i;     )
+		
+	  do 
+		let c = 4294967296; // pow(2,32)
+		let i; for (i = c;  i >>= 1; )
+		
+		
+	  now your wondering why use bitwise shift operators?
+	  normal mathematical operators require a bitwise translation
+	  done by compilers & interpreters that produce a general
+	  solution but not the fastest.
+	  shifting down is simple, it's carrys the bits down but
+	  not by moving them all. just delete one end and insert a 
+	  zero on the other end.
+	  
+	  javascript numbers are 32bit constrained. so you can only 
+	  iterate loop 31 times or 32 depending on what limiter 
+	  conditions you implement.
+	  
 * while loop anatomy
+
+	The while loop is a stripped down version of the the for loop.
+	For loops iterations are usually meant to be deterministic.
+	A while loop however is geared for non deterministic endings.
+	
+	Heres a for loop anatomy.
+	
+		for (initial; limiter; incrémenter) codeToRepeat;
+	
+	Heres a while loops anatomy.
+	
+		while (limiter) codeToRepeat
+		
+	See, a while loops main concern are the conditions to be met.
+		
 * while loop tweaking
+
+	
 
 * Pattern Recognition
 

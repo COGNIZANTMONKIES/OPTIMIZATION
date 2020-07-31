@@ -1,1 +1,56 @@
+******************************************************************
+******************************************************************
+      Functional Anatomy
+******************************************************************
+******************************************************************
+* anatomy point of views
+* optimizing validations in loops
+* eliminating redundant validations
+******************************************************************
+
+
+* anatomy point of views
+
+  Normal Presented Anatomy
+    
+    function <name> (<params>) { 
+      <code> 
+    }
+    
+  The Real Anatomy (Hackers Point of View)
+  
+    function <name> (<params>) {
+      <validations>
+      <block>
+    }
+  
+  Notice <code> replaced with <validations> and <block>.
+  
+  <validations> assert input data is non malicious, within ranges,
+  and are appropriate datatypes.
+  
+  <block> is the functions intended code to execute.
+  
+  
+  Examples
+  
+    function joinStr(arr) {
+     
+      // validation
+      
+      Array.isArray(arr)                               || (()=>{throw new Error()})() 
+      arr.every((e=>{ return typeof e === "string" })) || (()=>{throw new Error()})()
+      
+      // block
+      let str = "";
+      arr.forEach((e)=>{ str += e });
+    }
+    
+    now this is a book about optimizations.
+    
+  
+  
+  
+  
+
 

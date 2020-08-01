@@ -41,7 +41,8 @@
     validating input data. The algorithms weakness is that it loops over the array
     twice. First loop asserts datatype. Second loop concatenates. Another weakness of
     arrToStr is the memory usage. An existing array followed by a matching string
-    is no bueno unless for any reason the program required it.
+    is no bueno unless for any reason the program required it. Only one benefit from
+    this approach no memory writes waisted if any invalid inputs.
   
     function arrToStr(arr) {
      
@@ -62,7 +63,9 @@
     array input one time while deleting the indexed value but transfers the
     value to a str. This function is safe from falsy values in the array.
     Notice that the repeated code block was compensated by the loops
-    limiter position. 
+    limiter position. We can call this approach "on the fly validations"
+    to avoid looping twice and write to memory as you go. After all, it
+    takes a split second to delete used spaces.
      
     function arrToStr_optimized(arr) {
       

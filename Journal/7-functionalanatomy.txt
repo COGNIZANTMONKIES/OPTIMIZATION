@@ -33,6 +33,10 @@
   
 * optimizing validation loops
 
+    The problem with the functional anatomy is the sequential ordering.
+    Singular inputs like numbers and booleans are fine to use the functional anatomy.
+    Tho plural datatypes like strings, objects, and arrays need an adjustment to that model.
+
     The function arrToStr below is a prime example of the innefficiencies posed when
     validating input data. The algorithms weakness is that it loops over the array
     twice. First loop asserts datatype. Second loop concatenates. Another weakness of
@@ -57,6 +61,8 @@
     Function arrToStr_optimized uses little CPU and Memory. It traverses the
     array input one time while deleting the indexed value but transfers the
     value to a str. This function is safe from falsy values in the array.
+    Notice that the repeated code block was compensated by the loops
+    limiter position. 
      
     function arrToStr_optimized(arr) {
       
@@ -79,6 +85,11 @@
       
       return str
     }
+    
+    
+    
+    
+    
     
   
   

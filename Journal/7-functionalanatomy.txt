@@ -40,7 +40,7 @@
     The function arrToStr below is a prime example of the innefficiencies posed when
     validating input data. The algorithms weakness is that it loops over the array
     twice. First loop asserts datatype. Second loop concatenates. Another weakness of
-    joinStr is the memory usage. An existing array followed by a matching string
+    arrToStr is the memory usage. An existing array followed by a matching string
     is no bueno unless for any reason the program required it.
   
     function arrToStr(arr) {
@@ -85,6 +85,80 @@
       
       return str
     }
+    
+    
+    In the example below. We will not use JS builtin Number function to convert
+    any valid value to a number datatype. Function strToNum exhibits replicable
+    problems arrToStr presented. It loops twice over the list. 
+    
+    
+    function strToNum(str) {
+      
+      // validations
+      
+      typeof str === "string" || (()=>{throw new Error()})();
+      !str.match(/[^0-9]/)    || (()=>{throw new Error()})(); 
+      
+      // block
+ 
+      let refs = {
+            "0":0,"1":1,"2":2,"3":3,"4":4,
+            "5":5,"6":6,"7":7,"8":8,"9":9
+      };
+ 
+      let num = 0;
+      let i;
+      for (i = str.length-1; i; i--) num += refs[str[i]] * Math.pow(10,(str.length - (i + 1)));
+      
+      num += refs[str[0]] * Math.pow(10,(str.length - 1));
+      
+      return num;
+    }
+    
+    Function strToNum_optimized solution loops through the string validating information
+    first, then looking up information. Instead of using regex to match against numbers,
+    the variable refs table is relied upon for an indexed value of a number or undefined.
+    
+    function strToNum_optimized(str) {
+      
+      // validations
+      
+      typeof str === "string" || (()=>{throw new Error()})();
+      
+      // block
+ 
+      let refs = {
+            "0":0,"1":1,"2":2,"3":3,"4":4,
+            "5":5,"6":6,"7":7,"8":8,"9":9
+      };
+ 
+      let num = 0;
+      let i;
+      
+      for (
+            i = str.length-1; 
+            i; 
+            i--
+      ) {
+            num += refs[str[i]] * Math.pow(10,(str.length - (i + 1)));
+      }
+      
+      num += refs[str[0]] * Math.pow(10,(str.length - 1));
+      
+      return num;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

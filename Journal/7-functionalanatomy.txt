@@ -89,8 +89,53 @@
       return str
     }
     
+    Summing an array with unknown datatypes inputs and unsorted values.
+    Again, this approach is inneficient as it loops the array twice.
+    JavaScript developers have been known to rely on hardware speed.
+    That is bad practice. It's one thing for json lists to contain
+    10 or less indexes in there lists. It's another problem when
+    the returned database queries are 100s to 1000s to 10000s and beyond.
     
+    function sumArr(arr) {
+      
+      // validations
+      
+      Array.isArray(arr) || (()=>{throw new Error()})();
+      arr.every((e)=>{ return typeof e === "number" });
+      
+      // block
+      
+      let sum = 0;
+      
+      arr.forEach((e)=>{ sum += e; });
+      
+      return sum;
+    }
     
+    Below function sumArr_optimized is concious of ensuring
+    the indexed values are numbers. Not only does it assert
+    proper inputs, it kills two birds with one stone because
+    accessing an arrays values requires the iteration number
+    to be an integer of 0 -> array index limit. Thats why the
+    if statement checks for i > -1 to ensure no loop was terminated
+    early from an improper datatype.
+    
+    function sumArr_optimized(arr) {
+    
+      // validations
+      
+      Array.isArray(arr) || (()=>{throw new Error()})();
+      
+      // block
+      
+      let sum = 0;
+      let i;
+      for (i = arr.length-1; typeof arr[i] === "number"; sum+=arr[i--]) ;
+      
+      (i > -1) && (()=>{throw new Error()})()
+      
+      return sum;
+    }
     
     
     

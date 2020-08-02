@@ -130,7 +130,11 @@
       
       let sum = 0;
       let i;
-      for (i = arr.length-1; typeof arr[i] === "number"; sum+=arr[i--]) ;
+      for (
+            i = arr.length-1; 
+            typeof arr[i] === "number"; 
+            sum+=arr[i--]
+      ) ;
       
       (i > -1) && (()=>{throw new Error()})()
       

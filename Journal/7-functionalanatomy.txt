@@ -155,7 +155,15 @@
   The componentized anatomy point of view I propose has worked in my recent projects.
   It's an eye opener to the code patterns presented everywhere in programming. These concepts are nothing
   new but scavenged into a unified model to give clarity about programming functions.
+  Remember, just like science, complex things are made of simple things and once understood,
+  complexity becomes simple. A large codebase is nothing more than derived simple functions that work 
+  sequentially or unsequentially. A codebase should be viewed as a large function or even with 
+  when in high states of clarity a small esoteric writtenly procedure equivalent to that large function.
+  For example, chemistry was a mystical art until worldwide collaborative efforts realized 
+  the periodic table modeled behaviors. Understanding the concept of atoms aligned with the periodic table drove
+  that field in new prosperous directions.
   
+  Abstract Model
   
   const dynamicFunctionAnatomy = Object.freeze(Object.assign(
       function() {
@@ -170,8 +178,155 @@
       }
   ));
   
-  the anonymous function calls the 3 
-
+  The anonymous function calls the 3 segmented anatomized functions.
+  These distinguishements allow individual and whole usage of the
+  functions disceted capabilities. Below are ways to use the sliced individuals.
+  
+  
+  let dfa = dynamicFunctionAnatomy;
+  
+  dfa.defaults(/*arguments here*/);
+  dfa.validate(/*arguments here*/);
+  dfa.block   (/*arguments here*/);
+  
+  // or as whole which the normal way of invoking functions.
+  
+  dfa(/*arguments here*/)
+  
+  Concrete example
+  
+     Here we have a normally written function.
+     
+     function printSomething(str) {
+            
+            if (str === undefined) {
+                  str = "hello";
+            } else {
+                  typeof str === "string" || (()=>{throw new Error()})();            
+                  str.length === 0 && str = "hello"
+            }
+            
+            console.log(str);
+     }
+     
+     And here we have adopted the dynamicFunctionAnatomy model.
+     
+     const printSomething = Object.freeze(Object.assign(
+            function() {
+                  printSomething.defaults(arguments);
+                  printSomething.validate(arguments);
+                  printSomething.block   (arguments);
+            },
+            {
+                  defaults: function(){
+                        if (arguments[0] === undefined) {
+                              arguments[0] = "hello";
+                        }
+                  },
+                  validate: function(){
+                        if (arguments[0]) {
+                             typeof arguments[0] === "string" || (()=>{throw new Error()})();            
+                             arguments[0].length === 0 && arguments[0] = "hello"
+                        }
+                  },
+                  block   : function(){
+                        console.log(arguments[0]);
+                  }
+            }
+     ));
+     
+     let arg = "goodbye";
+     printSomething(arg); // logs "hello";
+     
+     arg = "";
+     
+     printSomething.defaults(arg); // modifies arg variable to "hello"
+     printSomething.validate(arg); // asserts arg variable is datatype string
+     printSomething.block.  (arg); // logs "hello" to the console.
+     
+     
+     Some would say that the simple example is overkill. Don't let that distract you.
+     We are only using a simple straightforward example to understand the model.
+  
+     Lets move on to the big picture. Combining many of the functions together.
+     
+     const a = Object.freeze(Object.assign(
+      function(){
+            a.default (arguments);
+            a.validate(arguments);
+            a.block   (arguments);
+      },
+      {
+            default:  function(){},
+            validate: function(){},
+            block:    function(){}
+      })
+     );
+     const b = Object.freeze(Object.assign(
+      function(){
+            b.default (arguments);
+            b.validate(arguments);
+            b.block   (arguments);
+      },
+      {
+            default:  function(){},
+            validate: function(){},
+            block:    function(){}
+      })
+     );
+     const c = Object.freeze(Object.assign(
+      function(){
+            c.default (arguments);
+            c.validate(arguments);
+            c.block   (arguments);
+      },
+      {
+            default:  function(){},
+            validate: function(){},
+            block:    function(){}
+      })
+     );
+     const d = Object.freeze(Object.assign(
+      function(){
+            d.default (arguments);
+            d.validate(arguments);
+            d.block   (arguments);
+      },
+      {
+            default:  function(){},
+            validate: function(){},
+            block:    function(){}
+      })
+     );
+     
+     
+     Here we have a traditional usage of functions that execute independently.
+     
+     function main_0(){
+       a();
+       b();
+       c();
+       d();
+     }
+     
+     
+     Here we have a consciously crafted piece of code working together.
+     
+     function main_1(){
+      a.validate();
+      b.validate();
+      c.validate();
+      d.validate();
+      a.block();
+      b.block();
+      c.block();
+      d.block();
+     }
+     
+     Function main_1 unlike main_0 is more concerned about ensuring all input variables are sanitized
+     before executing block manipulations.
+     
+  
     
     
     

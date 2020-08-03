@@ -310,7 +310,7 @@
      }
      
      
-     Here we have a consciously crafted piece of code working together.
+     Here we have segmented code into two sections. Validations and block executions.
      
      function main_1(){
       a.validate();
@@ -324,9 +324,41 @@
      }
      
      Function main_1 unlike main_0 is more concerned about ensuring all input variables are sanitized
-     before executing block manipulations.
+     before executing block manipulations. Imagine this style of programming on a server.
+     You wouldn't need to write throw away code crafted only for the server because the functions
+     are segmentable.
      
-  
+     Below is a scenario where redundant validations are eliminated.
+     
+     
+     function a_block   () {} // performs string manipulation
+     function a_validate() {} // only checks for string datatype
+     function b_block   () {} // performs string manipulation
+     function b_validate() {} // only checks for string datatype
+     function c_block   () {} // performs string manipulation
+     function c_validate() {} // only checks for string datatype
+     function d_block   () {} // performs string manipulation
+     function d_validate() {} // only checks for string datatype
+     
+     function main() {
+            a_validate();
+            a_block   ();
+            b_block   ();
+            c_block   ();
+            d_block   ();
+     }
+     
+     Notice in function main there are not 8 function calls rather only 5.
+     As far as the math goes. Instructions/operations are not equal execution
+     times, but the clutter amount of instructions needed is
+     
+     validations <= blocks
+     validations + blocks <= maxInstructions
+     
+     (blocks - shared validations) <= blocks
+     
+     
+     
     
     
     

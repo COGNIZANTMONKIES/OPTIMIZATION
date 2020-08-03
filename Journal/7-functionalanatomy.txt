@@ -144,6 +144,37 @@
     
     
     
+* eliminating redundant validations
+
+  Aiding in debugging and securing code has cluttered codebases
+  with unwanted and unnoticed data input assertions. The main intention
+  of writing functions is to be independent from other code. Yet these functions
+  are unaware of it's implemented positons. In other words, code is written statically
+  and needs to be dynamic. How you might ask to code dynamically? 
+  First a universal componentized functional anatomy agreement must union. 
+  The componentized anatomy point of view I propose has worked in my recent projects.
+  It's an eye opener to the code patterns presented everywhere in programming. These concepts are nothing
+  new but scavenged into a unified model to give clarity about programming functions.
+  
+  
+  const dynamicFunctionAnatomy = Object.freeze(Object.assign(
+      function() {
+            dynamicFunctionAnatomy.defaults(arguments);
+            dynamicFunctionAnatomy.validate(arguments);
+            dynamicFunctionAnatomy.block   (arguments);
+      },
+      {
+            defaults: function(){},
+            validate: function(){},
+            block   : function(){}
+      }
+  ));
+  
+  the anonymous function calls the 3 
+
+    
+    
+    
     
     
     

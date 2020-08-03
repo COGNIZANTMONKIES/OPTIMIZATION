@@ -136,7 +136,7 @@
             sum+=arr[i--]
       ) ;
       
-      (i > -1) && (()=>{throw new Error()})()
+      (i !== -1) && (()=>{throw new Error()})()
       
       return sum;
     }

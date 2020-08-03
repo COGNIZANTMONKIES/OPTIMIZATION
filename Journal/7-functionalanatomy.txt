@@ -355,7 +355,7 @@
      validations <= blocks
      validations + blocks <= maxInstructions
      
-     (blocks - shared validations) <= blocks
+     (blocks - omitted validations) <= blocks
      
      
      

@@ -352,10 +352,10 @@
      As far as the math goes. Instructions/operations are not equal execution
      times, but the clutter amount of instructions needed is
      
-     validations <= blocks
+     validations <= blocks <===> (blocks - omitted validations) <= blocks
      validations + blocks <= maxInstructions
      
-     (blocks - omitted validations) <= blocks
+     
      
      
      

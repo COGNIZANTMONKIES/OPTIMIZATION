@@ -309,7 +309,6 @@
        d();
      }
      
-     
      Here we have segmented code into two sections. Validations and block executions.
      
      function main_1(){
@@ -330,18 +329,17 @@
      
      Below is a scenario where redundant validations are eliminated.
      
-     
-     function a_block   () {} // performs string manipulation
-     function a_validate() {} // only checks for string datatype
-     function b_block   () {} // performs string manipulation
-     function b_validate() {} // only checks for string datatype
-     function c_block   () {} // performs string manipulation
-     function c_validate() {} // only checks for string datatype
-     function d_block   () {} // performs string manipulation
-     function d_validate() {} // only checks for string datatype
+     function a_block   () {} // performs array manipulation
+     function a_validate() {} // only checks for array datatype
+     function b_block   () {} // performs array manipulation
+     function b_validate() {} // only checks for array datatype
+     function c_block   () {} // performs array manipulation
+     function c_validate() {} // only checks for array datatype
+     function d_block   () {} // performs array manipulation
+     function d_validate() {} // only checks for array datatype
      
      function main() {
-            a_validate();
+            a_validate(); // or b_validate or c_validate or d_validate
             a_block   ();
             b_block   ();
             c_block   ();
@@ -354,6 +352,10 @@
      
      validations <= blocks <===> (blocks - omitted validations) <= blocks
      validations + blocks <= maxInstructions
+     maxInstructions = n * [<name>_validate + <name>_block]
+     
+     
+     
      
      
      
